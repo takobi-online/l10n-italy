@@ -477,11 +477,29 @@ class NaturaType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_
 NaturaType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=NaturaType, enum_prefix=None)
 NaturaType.N1 = NaturaType._CF_enumeration.addEnumeration(unicode_value='N1', tag='N1')
 NaturaType.N2 = NaturaType._CF_enumeration.addEnumeration(unicode_value='N2', tag='N2')
+NaturaType.N2_1 = NaturaType._CF_enumeration.addEnumeration(unicode_value='N2.1', tag='N2.1')
+NaturaType.N2_2 = NaturaType._CF_enumeration.addEnumeration(unicode_value='N2.2', tag='N2.2')
 NaturaType.N3 = NaturaType._CF_enumeration.addEnumeration(unicode_value='N3', tag='N3')
+NaturaType.N3_1 = NaturaType._CF_enumeration.addEnumeration(unicode_value='N3.1', tag='N3.1')
+NaturaType.N3_2 = NaturaType._CF_enumeration.addEnumeration(unicode_value='N3.2', tag='N3.2')
+NaturaType.N3_3 = NaturaType._CF_enumeration.addEnumeration(unicode_value='N3.3', tag='N3.3')
+NaturaType.N3_4 = NaturaType._CF_enumeration.addEnumeration(unicode_value='N3.4', tag='N3.4')
+NaturaType.N3_5 = NaturaType._CF_enumeration.addEnumeration(unicode_value='N3.5', tag='N3.5')
+NaturaType.N3_6 = NaturaType._CF_enumeration.addEnumeration(unicode_value='N3.6', tag='N3.6')
 NaturaType.N4 = NaturaType._CF_enumeration.addEnumeration(unicode_value='N4', tag='N4')
 NaturaType.N5 = NaturaType._CF_enumeration.addEnumeration(unicode_value='N5', tag='N5')
 NaturaType.N6 = NaturaType._CF_enumeration.addEnumeration(unicode_value='N6', tag='N6')
+NaturaType.N6_1 = NaturaType._CF_enumeration.addEnumeration(unicode_value='N6.1', tag='N6.1')
+NaturaType.N6_2 = NaturaType._CF_enumeration.addEnumeration(unicode_value='N6.2', tag='N6.2')
+NaturaType.N6_3 = NaturaType._CF_enumeration.addEnumeration(unicode_value='N6.3', tag='N6.3')
+NaturaType.N6_4 = NaturaType._CF_enumeration.addEnumeration(unicode_value='N6.4', tag='N6.4')
+NaturaType.N6_5 = NaturaType._CF_enumeration.addEnumeration(unicode_value='N6.5', tag='N6.5')
+NaturaType.N6_6 = NaturaType._CF_enumeration.addEnumeration(unicode_value='N6.6', tag='N6.6')
+NaturaType.N6_7 = NaturaType._CF_enumeration.addEnumeration(unicode_value='N6.7', tag='N6.7')
+NaturaType.N6_8 = NaturaType._CF_enumeration.addEnumeration(unicode_value='N6.8', tag='N6.8')
+NaturaType.N6_9 = NaturaType._CF_enumeration.addEnumeration(unicode_value='N6.9', tag='N6.9')
 NaturaType.N7 = NaturaType._CF_enumeration.addEnumeration(unicode_value='N7', tag='N7')
+
 NaturaType._InitializeFacetMap(NaturaType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'NaturaType', NaturaType)
 _module_typeBindings.NaturaType = NaturaType
@@ -1076,46 +1094,46 @@ class FatturaElettronicaHeaderType (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element DatiTrasmissione uses Python identifier DatiTrasmissione
     __DatiTrasmissione = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'DatiTrasmissione'), 'DatiTrasmissione', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_FatturaElettronicaHeaderType_DatiTrasmissione', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 25, 6), )
 
-    
+
     DatiTrasmissione = property(__DatiTrasmissione.value, __DatiTrasmissione.set, None, None)
 
-    
+
     # Element CedentePrestatore uses Python identifier CedentePrestatore
     __CedentePrestatore = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'CedentePrestatore'), 'CedentePrestatore', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_FatturaElettronicaHeaderType_CedentePrestatore', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 26, 6), )
 
-    
+
     CedentePrestatore = property(__CedentePrestatore.value, __CedentePrestatore.set, None, None)
 
-    
+
     # Element RappresentanteFiscale uses Python identifier RappresentanteFiscale
     __RappresentanteFiscale = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'RappresentanteFiscale'), 'RappresentanteFiscale', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_FatturaElettronicaHeaderType_RappresentanteFiscale', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 27, 6), )
 
-    
+
     RappresentanteFiscale = property(__RappresentanteFiscale.value, __RappresentanteFiscale.set, None, None)
 
-    
+
     # Element CessionarioCommittente uses Python identifier CessionarioCommittente
     __CessionarioCommittente = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'CessionarioCommittente'), 'CessionarioCommittente', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_FatturaElettronicaHeaderType_CessionarioCommittente', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 28, 6), )
 
-    
+
     CessionarioCommittente = property(__CessionarioCommittente.value, __CessionarioCommittente.set, None, None)
 
-    
+
     # Element TerzoIntermediarioOSoggettoEmittente uses Python identifier TerzoIntermediarioOSoggettoEmittente
     __TerzoIntermediarioOSoggettoEmittente = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'TerzoIntermediarioOSoggettoEmittente'), 'TerzoIntermediarioOSoggettoEmittente', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_FatturaElettronicaHeaderType_TerzoIntermediarioOSoggettoEmittente', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 29, 6), )
 
-    
+
     TerzoIntermediarioOSoggettoEmittente = property(__TerzoIntermediarioOSoggettoEmittente.value, __TerzoIntermediarioOSoggettoEmittente.set, None, None)
 
-    
+
     # Element SoggettoEmittente uses Python identifier SoggettoEmittente
     __SoggettoEmittente = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'SoggettoEmittente'), 'SoggettoEmittente', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_FatturaElettronicaHeaderType_SoggettoEmittente', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 30, 6), )
 
-    
+
     SoggettoEmittente = property(__SoggettoEmittente.value, __SoggettoEmittente.set, None, None)
 
     _ElementMap.update({
@@ -1127,7 +1145,7 @@ class FatturaElettronicaHeaderType (pyxb.binding.basis.complexTypeDefinition):
         __SoggettoEmittente.name() : __SoggettoEmittente
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.FatturaElettronicaHeaderType = FatturaElettronicaHeaderType
 Namespace.addCategoryObject('typeBinding', 'FatturaElettronicaHeaderType', FatturaElettronicaHeaderType)
@@ -1144,39 +1162,39 @@ class FatturaElettronicaBodyType (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element DatiGenerali uses Python identifier DatiGenerali
     __DatiGenerali = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'DatiGenerali'), 'DatiGenerali', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_FatturaElettronicaBodyType_DatiGenerali', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 35, 6), )
 
-    
+
     DatiGenerali = property(__DatiGenerali.value, __DatiGenerali.set, None, None)
 
-    
+
     # Element DatiBeniServizi uses Python identifier DatiBeniServizi
     __DatiBeniServizi = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'DatiBeniServizi'), 'DatiBeniServizi', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_FatturaElettronicaBodyType_DatiBeniServizi', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 36, 6), )
 
-    
+
     DatiBeniServizi = property(__DatiBeniServizi.value, __DatiBeniServizi.set, None, None)
 
-    
+
     # Element DatiVeicoli uses Python identifier DatiVeicoli
     __DatiVeicoli = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'DatiVeicoli'), 'DatiVeicoli', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_FatturaElettronicaBodyType_DatiVeicoli', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 37, 6), )
 
-    
+
     DatiVeicoli = property(__DatiVeicoli.value, __DatiVeicoli.set, None, None)
 
-    
+
     # Element DatiPagamento uses Python identifier DatiPagamento
     __DatiPagamento = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'DatiPagamento'), 'DatiPagamento', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_FatturaElettronicaBodyType_DatiPagamento', True, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 38, 6), )
 
-    
+
     DatiPagamento = property(__DatiPagamento.value, __DatiPagamento.set, None, None)
 
-    
+
     # Element Allegati uses Python identifier Allegati
     __Allegati = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'Allegati'), 'Allegati', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_FatturaElettronicaBodyType_Allegati', True, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 39, 6), )
 
-    
+
     Allegati = property(__Allegati.value, __Allegati.set, None, None)
 
     _ElementMap.update({
@@ -1187,7 +1205,7 @@ class FatturaElettronicaBodyType (pyxb.binding.basis.complexTypeDefinition):
         __Allegati.name() : __Allegati
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.FatturaElettronicaBodyType = FatturaElettronicaBodyType
 Namespace.addCategoryObject('typeBinding', 'FatturaElettronicaBodyType', FatturaElettronicaBodyType)
@@ -1204,46 +1222,46 @@ class DatiTrasmissioneType (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element IdTrasmittente uses Python identifier IdTrasmittente
     __IdTrasmittente = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'IdTrasmittente'), 'IdTrasmittente', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiTrasmissioneType_IdTrasmittente', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 47, 6), )
 
-    
+
     IdTrasmittente = property(__IdTrasmittente.value, __IdTrasmittente.set, None, None)
 
-    
+
     # Element ProgressivoInvio uses Python identifier ProgressivoInvio
     __ProgressivoInvio = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'ProgressivoInvio'), 'ProgressivoInvio', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiTrasmissioneType_ProgressivoInvio', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 48, 6), )
 
-    
+
     ProgressivoInvio = property(__ProgressivoInvio.value, __ProgressivoInvio.set, None, None)
 
-    
+
     # Element FormatoTrasmissione uses Python identifier FormatoTrasmissione
     __FormatoTrasmissione = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'FormatoTrasmissione'), 'FormatoTrasmissione', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiTrasmissioneType_FormatoTrasmissione', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 49, 6), )
 
-    
+
     FormatoTrasmissione = property(__FormatoTrasmissione.value, __FormatoTrasmissione.set, None, None)
 
-    
+
     # Element CodiceDestinatario uses Python identifier CodiceDestinatario
     __CodiceDestinatario = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'CodiceDestinatario'), 'CodiceDestinatario', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiTrasmissioneType_CodiceDestinatario', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 50, 6), )
 
-    
+
     CodiceDestinatario = property(__CodiceDestinatario.value, __CodiceDestinatario.set, None, None)
 
-    
+
     # Element ContattiTrasmittente uses Python identifier ContattiTrasmittente
     __ContattiTrasmittente = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'ContattiTrasmittente'), 'ContattiTrasmittente', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiTrasmissioneType_ContattiTrasmittente', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 51, 6), )
 
-    
+
     ContattiTrasmittente = property(__ContattiTrasmittente.value, __ContattiTrasmittente.set, None, None)
 
-    
+
     # Element PECDestinatario uses Python identifier PECDestinatario
     __PECDestinatario = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'PECDestinatario'), 'PECDestinatario', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiTrasmissioneType_PECDestinatario', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 52, 6), )
 
-    
+
     PECDestinatario = property(__PECDestinatario.value, __PECDestinatario.set, None, None)
 
     _ElementMap.update({
@@ -1255,7 +1273,7 @@ class DatiTrasmissioneType (pyxb.binding.basis.complexTypeDefinition):
         __PECDestinatario.name() : __PECDestinatario
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.DatiTrasmissioneType = DatiTrasmissioneType
 Namespace.addCategoryObject('typeBinding', 'DatiTrasmissioneType', DatiTrasmissioneType)
@@ -1272,18 +1290,18 @@ class IdFiscaleType (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element IdPaese uses Python identifier IdPaese
     __IdPaese = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'IdPaese'), 'IdPaese', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_IdFiscaleType_IdPaese', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 62, 6), )
 
-    
+
     IdPaese = property(__IdPaese.value, __IdPaese.set, None, None)
 
-    
+
     # Element IdCodice uses Python identifier IdCodice
     __IdCodice = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'IdCodice'), 'IdCodice', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_IdFiscaleType_IdCodice', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 63, 6), )
 
-    
+
     IdCodice = property(__IdCodice.value, __IdCodice.set, None, None)
 
     _ElementMap.update({
@@ -1291,7 +1309,7 @@ class IdFiscaleType (pyxb.binding.basis.complexTypeDefinition):
         __IdCodice.name() : __IdCodice
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.IdFiscaleType = IdFiscaleType
 Namespace.addCategoryObject('typeBinding', 'IdFiscaleType', IdFiscaleType)
@@ -1308,18 +1326,18 @@ class ContattiTrasmittenteType (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element Telefono uses Python identifier Telefono
     __Telefono = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'Telefono'), 'Telefono', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_ContattiTrasmittenteType_Telefono', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 89, 6), )
 
-    
+
     Telefono = property(__Telefono.value, __Telefono.set, None, None)
 
-    
+
     # Element Email uses Python identifier Email
     __Email = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'Email'), 'Email', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_ContattiTrasmittenteType_Email', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 90, 6), )
 
-    
+
     Email = property(__Email.value, __Email.set, None, None)
 
     _ElementMap.update({
@@ -1327,7 +1345,7 @@ class ContattiTrasmittenteType (pyxb.binding.basis.complexTypeDefinition):
         __Email.name() : __Email
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.ContattiTrasmittenteType = ContattiTrasmittenteType
 Namespace.addCategoryObject('typeBinding', 'ContattiTrasmittenteType', ContattiTrasmittenteType)
@@ -1346,74 +1364,74 @@ class DatiGeneraliType (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element DatiGeneraliDocumento uses Python identifier DatiGeneraliDocumento
     __DatiGeneraliDocumento = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'DatiGeneraliDocumento'), 'DatiGeneraliDocumento', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiGeneraliType_DatiGeneraliDocumento', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 100, 6), )
 
-    
+
     DatiGeneraliDocumento = property(__DatiGeneraliDocumento.value, __DatiGeneraliDocumento.set, None, None)
 
-    
+
     # Element DatiOrdineAcquisto uses Python identifier DatiOrdineAcquisto
     __DatiOrdineAcquisto = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'DatiOrdineAcquisto'), 'DatiOrdineAcquisto', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiGeneraliType_DatiOrdineAcquisto', True, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 101, 6), )
 
-    
+
     DatiOrdineAcquisto = property(__DatiOrdineAcquisto.value, __DatiOrdineAcquisto.set, None, None)
 
-    
+
     # Element DatiContratto uses Python identifier DatiContratto
     __DatiContratto = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'DatiContratto'), 'DatiContratto', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiGeneraliType_DatiContratto', True, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 102, 6), )
 
-    
+
     DatiContratto = property(__DatiContratto.value, __DatiContratto.set, None, None)
 
-    
+
     # Element DatiConvenzione uses Python identifier DatiConvenzione
     __DatiConvenzione = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'DatiConvenzione'), 'DatiConvenzione', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiGeneraliType_DatiConvenzione', True, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 103, 6), )
 
-    
+
     DatiConvenzione = property(__DatiConvenzione.value, __DatiConvenzione.set, None, None)
 
-    
+
     # Element DatiRicezione uses Python identifier DatiRicezione
     __DatiRicezione = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'DatiRicezione'), 'DatiRicezione', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiGeneraliType_DatiRicezione', True, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 104, 6), )
 
-    
+
     DatiRicezione = property(__DatiRicezione.value, __DatiRicezione.set, None, None)
 
-    
+
     # Element DatiFattureCollegate uses Python identifier DatiFattureCollegate
     __DatiFattureCollegate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'DatiFattureCollegate'), 'DatiFattureCollegate', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiGeneraliType_DatiFattureCollegate', True, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 105, 6), )
 
-    
+
     DatiFattureCollegate = property(__DatiFattureCollegate.value, __DatiFattureCollegate.set, None, None)
 
-    
+
     # Element DatiSAL uses Python identifier DatiSAL
     __DatiSAL = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'DatiSAL'), 'DatiSAL', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiGeneraliType_DatiSAL', True, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 106, 6), )
 
-    
+
     DatiSAL = property(__DatiSAL.value, __DatiSAL.set, None, None)
 
-    
+
     # Element DatiDDT uses Python identifier DatiDDT
     __DatiDDT = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'DatiDDT'), 'DatiDDT', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiGeneraliType_DatiDDT', True, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 107, 6), )
 
-    
+
     DatiDDT = property(__DatiDDT.value, __DatiDDT.set, None, None)
 
-    
+
     # Element DatiTrasporto uses Python identifier DatiTrasporto
     __DatiTrasporto = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'DatiTrasporto'), 'DatiTrasporto', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiGeneraliType_DatiTrasporto', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 108, 6), )
 
-    
+
     DatiTrasporto = property(__DatiTrasporto.value, __DatiTrasporto.set, None, None)
 
-    
+
     # Element FatturaPrincipale uses Python identifier FatturaPrincipale
     __FatturaPrincipale = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'FatturaPrincipale'), 'FatturaPrincipale', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiGeneraliType_FatturaPrincipale', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 109, 6), )
 
-    
+
     FatturaPrincipale = property(__FatturaPrincipale.value, __FatturaPrincipale.set, None, None)
 
     _ElementMap.update({
@@ -1429,7 +1447,7 @@ class DatiGeneraliType (pyxb.binding.basis.complexTypeDefinition):
         __FatturaPrincipale.name() : __FatturaPrincipale
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.DatiGeneraliType = DatiGeneraliType
 Namespace.addCategoryObject('typeBinding', 'DatiGeneraliType', DatiGeneraliType)
@@ -1446,88 +1464,88 @@ class DatiGeneraliDocumentoType (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element TipoDocumento uses Python identifier TipoDocumento
     __TipoDocumento = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'TipoDocumento'), 'TipoDocumento', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiGeneraliDocumentoType_TipoDocumento', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 114, 6), )
 
-    
+
     TipoDocumento = property(__TipoDocumento.value, __TipoDocumento.set, None, None)
 
-    
+
     # Element Divisa uses Python identifier Divisa
     __Divisa = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'Divisa'), 'Divisa', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiGeneraliDocumentoType_Divisa', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 115, 6), )
 
-    
+
     Divisa = property(__Divisa.value, __Divisa.set, None, None)
 
-    
+
     # Element Data uses Python identifier Data
     __Data = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'Data'), 'Data', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiGeneraliDocumentoType_Data', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 116, 6), )
 
-    
+
     Data = property(__Data.value, __Data.set, None, None)
 
-    
+
     # Element Numero uses Python identifier Numero
     __Numero = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'Numero'), 'Numero', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiGeneraliDocumentoType_Numero', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 117, 6), )
 
-    
+
     Numero = property(__Numero.value, __Numero.set, None, None)
 
-    
+
     # Element DatiRitenuta uses Python identifier DatiRitenuta
     __DatiRitenuta = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'DatiRitenuta'), 'DatiRitenuta', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiGeneraliDocumentoType_DatiRitenuta', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 118, 6), )
 
-    
+
     DatiRitenuta = property(__DatiRitenuta.value, __DatiRitenuta.set, None, None)
 
-    
+
     # Element DatiBollo uses Python identifier DatiBollo
     __DatiBollo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'DatiBollo'), 'DatiBollo', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiGeneraliDocumentoType_DatiBollo', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 119, 6), )
 
-    
+
     DatiBollo = property(__DatiBollo.value, __DatiBollo.set, None, None)
 
-    
+
     # Element DatiCassaPrevidenziale uses Python identifier DatiCassaPrevidenziale
     __DatiCassaPrevidenziale = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'DatiCassaPrevidenziale'), 'DatiCassaPrevidenziale', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiGeneraliDocumentoType_DatiCassaPrevidenziale', True, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 120, 6), )
 
-    
+
     DatiCassaPrevidenziale = property(__DatiCassaPrevidenziale.value, __DatiCassaPrevidenziale.set, None, None)
 
-    
+
     # Element ScontoMaggiorazione uses Python identifier ScontoMaggiorazione
     __ScontoMaggiorazione = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'ScontoMaggiorazione'), 'ScontoMaggiorazione', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiGeneraliDocumentoType_ScontoMaggiorazione', True, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 121, 6), )
 
-    
+
     ScontoMaggiorazione = property(__ScontoMaggiorazione.value, __ScontoMaggiorazione.set, None, None)
 
-    
+
     # Element ImportoTotaleDocumento uses Python identifier ImportoTotaleDocumento
     __ImportoTotaleDocumento = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'ImportoTotaleDocumento'), 'ImportoTotaleDocumento', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiGeneraliDocumentoType_ImportoTotaleDocumento', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 122, 6), )
 
-    
+
     ImportoTotaleDocumento = property(__ImportoTotaleDocumento.value, __ImportoTotaleDocumento.set, None, None)
 
-    
+
     # Element Arrotondamento uses Python identifier Arrotondamento
     __Arrotondamento = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'Arrotondamento'), 'Arrotondamento', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiGeneraliDocumentoType_Arrotondamento', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 123, 6), )
 
-    
+
     Arrotondamento = property(__Arrotondamento.value, __Arrotondamento.set, None, None)
 
-    
+
     # Element Causale uses Python identifier Causale
     __Causale = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'Causale'), 'Causale', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiGeneraliDocumentoType_Causale', True, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 124, 6), )
 
-    
+
     Causale = property(__Causale.value, __Causale.set, None, None)
 
-    
+
     # Element Art73 uses Python identifier Art73
     __Art73 = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'Art73'), 'Art73', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiGeneraliDocumentoType_Art73', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 125, 6), )
 
-    
+
     Art73 = property(__Art73.value, __Art73.set, None, None)
 
     _ElementMap.update({
@@ -1545,7 +1563,7 @@ class DatiGeneraliDocumentoType (pyxb.binding.basis.complexTypeDefinition):
         __Art73.name() : __Art73
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.DatiGeneraliDocumentoType = DatiGeneraliDocumentoType
 Namespace.addCategoryObject('typeBinding', 'DatiGeneraliDocumentoType', DatiGeneraliDocumentoType)
@@ -1562,32 +1580,32 @@ class DatiRitenutaType (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element TipoRitenuta uses Python identifier TipoRitenuta
     __TipoRitenuta = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'TipoRitenuta'), 'TipoRitenuta', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiRitenutaType_TipoRitenuta', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 130, 6), )
 
-    
+
     TipoRitenuta = property(__TipoRitenuta.value, __TipoRitenuta.set, None, None)
 
-    
+
     # Element ImportoRitenuta uses Python identifier ImportoRitenuta
     __ImportoRitenuta = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'ImportoRitenuta'), 'ImportoRitenuta', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiRitenutaType_ImportoRitenuta', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 131, 6), )
 
-    
+
     ImportoRitenuta = property(__ImportoRitenuta.value, __ImportoRitenuta.set, None, None)
 
-    
+
     # Element AliquotaRitenuta uses Python identifier AliquotaRitenuta
     __AliquotaRitenuta = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'AliquotaRitenuta'), 'AliquotaRitenuta', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiRitenutaType_AliquotaRitenuta', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 132, 6), )
 
-    
+
     AliquotaRitenuta = property(__AliquotaRitenuta.value, __AliquotaRitenuta.set, None, None)
 
-    
+
     # Element CausalePagamento uses Python identifier CausalePagamento
     __CausalePagamento = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'CausalePagamento'), 'CausalePagamento', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiRitenutaType_CausalePagamento', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 133, 6), )
 
-    
+
     CausalePagamento = property(__CausalePagamento.value, __CausalePagamento.set, None, None)
 
     _ElementMap.update({
@@ -1597,7 +1615,7 @@ class DatiRitenutaType (pyxb.binding.basis.complexTypeDefinition):
         __CausalePagamento.name() : __CausalePagamento
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.DatiRitenutaType = DatiRitenutaType
 Namespace.addCategoryObject('typeBinding', 'DatiRitenutaType', DatiRitenutaType)
@@ -1614,18 +1632,18 @@ class DatiBolloType (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element BolloVirtuale uses Python identifier BolloVirtuale
     __BolloVirtuale = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'BolloVirtuale'), 'BolloVirtuale', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiBolloType_BolloVirtuale', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 138, 6), )
 
-    
+
     BolloVirtuale = property(__BolloVirtuale.value, __BolloVirtuale.set, None, None)
 
-    
+
     # Element ImportoBollo uses Python identifier ImportoBollo
     __ImportoBollo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'ImportoBollo'), 'ImportoBollo', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiBolloType_ImportoBollo', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 139, 6), )
 
-    
+
     ImportoBollo = property(__ImportoBollo.value, __ImportoBollo.set, None, None)
 
     _ElementMap.update({
@@ -1633,7 +1651,7 @@ class DatiBolloType (pyxb.binding.basis.complexTypeDefinition):
         __ImportoBollo.name() : __ImportoBollo
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.DatiBolloType = DatiBolloType
 Namespace.addCategoryObject('typeBinding', 'DatiBolloType', DatiBolloType)
@@ -1650,60 +1668,60 @@ class DatiCassaPrevidenzialeType (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element TipoCassa uses Python identifier TipoCassa
     __TipoCassa = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'TipoCassa'), 'TipoCassa', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiCassaPrevidenzialeType_TipoCassa', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 144, 6), )
 
-    
+
     TipoCassa = property(__TipoCassa.value, __TipoCassa.set, None, None)
 
-    
+
     # Element AlCassa uses Python identifier AlCassa
     __AlCassa = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'AlCassa'), 'AlCassa', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiCassaPrevidenzialeType_AlCassa', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 145, 6), )
 
-    
+
     AlCassa = property(__AlCassa.value, __AlCassa.set, None, None)
 
-    
+
     # Element ImportoContributoCassa uses Python identifier ImportoContributoCassa
     __ImportoContributoCassa = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'ImportoContributoCassa'), 'ImportoContributoCassa', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiCassaPrevidenzialeType_ImportoContributoCassa', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 146, 6), )
 
-    
+
     ImportoContributoCassa = property(__ImportoContributoCassa.value, __ImportoContributoCassa.set, None, None)
 
-    
+
     # Element ImponibileCassa uses Python identifier ImponibileCassa
     __ImponibileCassa = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'ImponibileCassa'), 'ImponibileCassa', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiCassaPrevidenzialeType_ImponibileCassa', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 147, 6), )
 
-    
+
     ImponibileCassa = property(__ImponibileCassa.value, __ImponibileCassa.set, None, None)
 
-    
+
     # Element AliquotaIVA uses Python identifier AliquotaIVA
     __AliquotaIVA = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'AliquotaIVA'), 'AliquotaIVA', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiCassaPrevidenzialeType_AliquotaIVA', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 148, 6), )
 
-    
+
     AliquotaIVA = property(__AliquotaIVA.value, __AliquotaIVA.set, None, None)
 
-    
+
     # Element Ritenuta uses Python identifier Ritenuta
     __Ritenuta = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'Ritenuta'), 'Ritenuta', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiCassaPrevidenzialeType_Ritenuta', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 149, 6), )
 
-    
+
     Ritenuta = property(__Ritenuta.value, __Ritenuta.set, None, None)
 
-    
+
     # Element Natura uses Python identifier Natura
     __Natura = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'Natura'), 'Natura', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiCassaPrevidenzialeType_Natura', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 150, 6), )
 
-    
+
     Natura = property(__Natura.value, __Natura.set, None, None)
 
-    
+
     # Element RiferimentoAmministrazione uses Python identifier RiferimentoAmministrazione
     __RiferimentoAmministrazione = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'RiferimentoAmministrazione'), 'RiferimentoAmministrazione', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiCassaPrevidenzialeType_RiferimentoAmministrazione', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 151, 6), )
 
-    
+
     RiferimentoAmministrazione = property(__RiferimentoAmministrazione.value, __RiferimentoAmministrazione.set, None, None)
 
     _ElementMap.update({
@@ -1717,7 +1735,7 @@ class DatiCassaPrevidenzialeType (pyxb.binding.basis.complexTypeDefinition):
         __RiferimentoAmministrazione.name() : __RiferimentoAmministrazione
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.DatiCassaPrevidenzialeType = DatiCassaPrevidenzialeType
 Namespace.addCategoryObject('typeBinding', 'DatiCassaPrevidenzialeType', DatiCassaPrevidenzialeType)
@@ -1734,25 +1752,25 @@ class ScontoMaggiorazioneType (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element Tipo uses Python identifier Tipo
     __Tipo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'Tipo'), 'Tipo', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_ScontoMaggiorazioneType_Tipo', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 156, 6), )
 
-    
+
     Tipo = property(__Tipo.value, __Tipo.set, None, None)
 
-    
+
     # Element Percentuale uses Python identifier Percentuale
     __Percentuale = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'Percentuale'), 'Percentuale', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_ScontoMaggiorazioneType_Percentuale', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 157, 6), )
 
-    
+
     Percentuale = property(__Percentuale.value, __Percentuale.set, None, None)
 
-    
+
     # Element Importo uses Python identifier Importo
     __Importo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'Importo'), 'Importo', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_ScontoMaggiorazioneType_Importo', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 158, 6), )
 
-    
+
     Importo = property(__Importo.value, __Importo.set, None, None)
 
     _ElementMap.update({
@@ -1761,7 +1779,7 @@ class ScontoMaggiorazioneType (pyxb.binding.basis.complexTypeDefinition):
         __Importo.name() : __Importo
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.ScontoMaggiorazioneType = ScontoMaggiorazioneType
 Namespace.addCategoryObject('typeBinding', 'ScontoMaggiorazioneType', ScontoMaggiorazioneType)
@@ -1778,18 +1796,18 @@ class DatiSALType (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element RiferimentoFase uses Python identifier RiferimentoFase
     __RiferimentoFase = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'RiferimentoFase'), 'RiferimentoFase', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiSALType_RiferimentoFase', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 440, 6), )
 
-    
+
     RiferimentoFase = property(__RiferimentoFase.value, __RiferimentoFase.set, None, None)
 
     _ElementMap.update({
         __RiferimentoFase.name() : __RiferimentoFase
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.DatiSALType = DatiSALType
 Namespace.addCategoryObject('typeBinding', 'DatiSALType', DatiSALType)
@@ -1806,53 +1824,53 @@ class DatiDocumentiCorrelatiType (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element RiferimentoNumeroLinea uses Python identifier RiferimentoNumeroLinea
     __RiferimentoNumeroLinea = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'RiferimentoNumeroLinea'), 'RiferimentoNumeroLinea', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiDocumentiCorrelatiType_RiferimentoNumeroLinea', True, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 445, 6), )
 
-    
+
     RiferimentoNumeroLinea = property(__RiferimentoNumeroLinea.value, __RiferimentoNumeroLinea.set, None, None)
 
-    
+
     # Element IdDocumento uses Python identifier IdDocumento
     __IdDocumento = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'IdDocumento'), 'IdDocumento', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiDocumentiCorrelatiType_IdDocumento', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 446, 6), )
 
-    
+
     IdDocumento = property(__IdDocumento.value, __IdDocumento.set, None, None)
 
-    
+
     # Element Data uses Python identifier Data
     __Data = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'Data'), 'Data', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiDocumentiCorrelatiType_Data', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 447, 6), )
 
-    
+
     Data = property(__Data.value, __Data.set, None, None)
 
-    
+
     # Element NumItem uses Python identifier NumItem
     __NumItem = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'NumItem'), 'NumItem', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiDocumentiCorrelatiType_NumItem', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 448, 6), )
 
-    
+
     NumItem = property(__NumItem.value, __NumItem.set, None, None)
 
-    
+
     # Element CodiceCommessaConvenzione uses Python identifier CodiceCommessaConvenzione
     __CodiceCommessaConvenzione = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'CodiceCommessaConvenzione'), 'CodiceCommessaConvenzione', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiDocumentiCorrelatiType_CodiceCommessaConvenzione', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 449, 6), )
 
-    
+
     CodiceCommessaConvenzione = property(__CodiceCommessaConvenzione.value, __CodiceCommessaConvenzione.set, None, None)
 
-    
+
     # Element CodiceCUP uses Python identifier CodiceCUP
     __CodiceCUP = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'CodiceCUP'), 'CodiceCUP', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiDocumentiCorrelatiType_CodiceCUP', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 450, 6), )
 
-    
+
     CodiceCUP = property(__CodiceCUP.value, __CodiceCUP.set, None, None)
 
-    
+
     # Element CodiceCIG uses Python identifier CodiceCIG
     __CodiceCIG = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'CodiceCIG'), 'CodiceCIG', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiDocumentiCorrelatiType_CodiceCIG', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 451, 6), )
 
-    
+
     CodiceCIG = property(__CodiceCIG.value, __CodiceCIG.set, None, None)
 
     _ElementMap.update({
@@ -1865,7 +1883,7 @@ class DatiDocumentiCorrelatiType (pyxb.binding.basis.complexTypeDefinition):
         __CodiceCIG.name() : __CodiceCIG
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.DatiDocumentiCorrelatiType = DatiDocumentiCorrelatiType
 Namespace.addCategoryObject('typeBinding', 'DatiDocumentiCorrelatiType', DatiDocumentiCorrelatiType)
@@ -1882,25 +1900,25 @@ class DatiDDTType (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element NumeroDDT uses Python identifier NumeroDDT
     __NumeroDDT = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'NumeroDDT'), 'NumeroDDT', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiDDTType_NumeroDDT', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 462, 6), )
 
-    
+
     NumeroDDT = property(__NumeroDDT.value, __NumeroDDT.set, None, None)
 
-    
+
     # Element DataDDT uses Python identifier DataDDT
     __DataDDT = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'DataDDT'), 'DataDDT', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiDDTType_DataDDT', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 463, 6), )
 
-    
+
     DataDDT = property(__DataDDT.value, __DataDDT.set, None, None)
 
-    
+
     # Element RiferimentoNumeroLinea uses Python identifier RiferimentoNumeroLinea
     __RiferimentoNumeroLinea = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'RiferimentoNumeroLinea'), 'RiferimentoNumeroLinea', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiDDTType_RiferimentoNumeroLinea', True, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 464, 6), )
 
-    
+
     RiferimentoNumeroLinea = property(__RiferimentoNumeroLinea.value, __RiferimentoNumeroLinea.set, None, None)
 
     _ElementMap.update({
@@ -1909,7 +1927,7 @@ class DatiDDTType (pyxb.binding.basis.complexTypeDefinition):
         __RiferimentoNumeroLinea.name() : __RiferimentoNumeroLinea
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.DatiDDTType = DatiDDTType
 Namespace.addCategoryObject('typeBinding', 'DatiDDTType', DatiDDTType)
@@ -1926,95 +1944,95 @@ class DatiTrasportoType (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element DatiAnagraficiVettore uses Python identifier DatiAnagraficiVettore
     __DatiAnagraficiVettore = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'DatiAnagraficiVettore'), 'DatiAnagraficiVettore', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiTrasportoType_DatiAnagraficiVettore', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 469, 6), )
 
-    
+
     DatiAnagraficiVettore = property(__DatiAnagraficiVettore.value, __DatiAnagraficiVettore.set, None, None)
 
-    
+
     # Element MezzoTrasporto uses Python identifier MezzoTrasporto
     __MezzoTrasporto = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'MezzoTrasporto'), 'MezzoTrasporto', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiTrasportoType_MezzoTrasporto', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 470, 6), )
 
-    
+
     MezzoTrasporto = property(__MezzoTrasporto.value, __MezzoTrasporto.set, None, None)
 
-    
+
     # Element CausaleTrasporto uses Python identifier CausaleTrasporto
     __CausaleTrasporto = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'CausaleTrasporto'), 'CausaleTrasporto', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiTrasportoType_CausaleTrasporto', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 471, 6), )
 
-    
+
     CausaleTrasporto = property(__CausaleTrasporto.value, __CausaleTrasporto.set, None, None)
 
-    
+
     # Element NumeroColli uses Python identifier NumeroColli
     __NumeroColli = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'NumeroColli'), 'NumeroColli', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiTrasportoType_NumeroColli', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 472, 6), )
 
-    
+
     NumeroColli = property(__NumeroColli.value, __NumeroColli.set, None, None)
 
-    
+
     # Element Descrizione uses Python identifier Descrizione
     __Descrizione = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'Descrizione'), 'Descrizione', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiTrasportoType_Descrizione', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 473, 6), )
 
-    
+
     Descrizione = property(__Descrizione.value, __Descrizione.set, None, None)
 
-    
+
     # Element UnitaMisuraPeso uses Python identifier UnitaMisuraPeso
     __UnitaMisuraPeso = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'UnitaMisuraPeso'), 'UnitaMisuraPeso', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiTrasportoType_UnitaMisuraPeso', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 474, 6), )
 
-    
+
     UnitaMisuraPeso = property(__UnitaMisuraPeso.value, __UnitaMisuraPeso.set, None, None)
 
-    
+
     # Element PesoLordo uses Python identifier PesoLordo
     __PesoLordo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'PesoLordo'), 'PesoLordo', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiTrasportoType_PesoLordo', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 475, 6), )
 
-    
+
     PesoLordo = property(__PesoLordo.value, __PesoLordo.set, None, None)
 
-    
+
     # Element PesoNetto uses Python identifier PesoNetto
     __PesoNetto = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'PesoNetto'), 'PesoNetto', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiTrasportoType_PesoNetto', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 476, 6), )
 
-    
+
     PesoNetto = property(__PesoNetto.value, __PesoNetto.set, None, None)
 
-    
+
     # Element DataOraRitiro uses Python identifier DataOraRitiro
     __DataOraRitiro = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'DataOraRitiro'), 'DataOraRitiro', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiTrasportoType_DataOraRitiro', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 477, 6), )
 
-    
+
     DataOraRitiro = property(__DataOraRitiro.value, __DataOraRitiro.set, None, None)
 
-    
+
     # Element DataInizioTrasporto uses Python identifier DataInizioTrasporto
     __DataInizioTrasporto = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'DataInizioTrasporto'), 'DataInizioTrasporto', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiTrasportoType_DataInizioTrasporto', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 478, 6), )
 
-    
+
     DataInizioTrasporto = property(__DataInizioTrasporto.value, __DataInizioTrasporto.set, None, None)
 
-    
+
     # Element TipoResa uses Python identifier TipoResa
     __TipoResa = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'TipoResa'), 'TipoResa', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiTrasportoType_TipoResa', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 479, 6), )
 
-    
+
     TipoResa = property(__TipoResa.value, __TipoResa.set, None, None)
 
-    
+
     # Element IndirizzoResa uses Python identifier IndirizzoResa
     __IndirizzoResa = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'IndirizzoResa'), 'IndirizzoResa', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiTrasportoType_IndirizzoResa', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 480, 6), )
 
-    
+
     IndirizzoResa = property(__IndirizzoResa.value, __IndirizzoResa.set, None, None)
 
-    
+
     # Element DataOraConsegna uses Python identifier DataOraConsegna
     __DataOraConsegna = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'DataOraConsegna'), 'DataOraConsegna', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiTrasportoType_DataOraConsegna', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 481, 6), )
 
-    
+
     DataOraConsegna = property(__DataOraConsegna.value, __DataOraConsegna.set, None, None)
 
     _ElementMap.update({
@@ -2033,7 +2051,7 @@ class DatiTrasportoType (pyxb.binding.basis.complexTypeDefinition):
         __DataOraConsegna.name() : __DataOraConsegna
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.DatiTrasportoType = DatiTrasportoType
 Namespace.addCategoryObject('typeBinding', 'DatiTrasportoType', DatiTrasportoType)
@@ -2050,46 +2068,46 @@ class IndirizzoType (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element Indirizzo uses Python identifier Indirizzo
     __Indirizzo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'Indirizzo'), 'Indirizzo', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_IndirizzoType_Indirizzo', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 486, 6), )
 
-    
+
     Indirizzo = property(__Indirizzo.value, __Indirizzo.set, None, None)
 
-    
+
     # Element NumeroCivico uses Python identifier NumeroCivico
     __NumeroCivico = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'NumeroCivico'), 'NumeroCivico', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_IndirizzoType_NumeroCivico', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 487, 6), )
 
-    
+
     NumeroCivico = property(__NumeroCivico.value, __NumeroCivico.set, None, None)
 
-    
+
     # Element CAP uses Python identifier CAP
     __CAP = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'CAP'), 'CAP', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_IndirizzoType_CAP', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 488, 6), )
 
-    
+
     CAP = property(__CAP.value, __CAP.set, None, None)
 
-    
+
     # Element Comune uses Python identifier Comune
     __Comune = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'Comune'), 'Comune', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_IndirizzoType_Comune', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 489, 6), )
 
-    
+
     Comune = property(__Comune.value, __Comune.set, None, None)
 
-    
+
     # Element Provincia uses Python identifier Provincia
     __Provincia = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'Provincia'), 'Provincia', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_IndirizzoType_Provincia', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 490, 6), )
 
-    
+
     Provincia = property(__Provincia.value, __Provincia.set, None, None)
 
-    
+
     # Element Nazione uses Python identifier Nazione
     __Nazione = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'Nazione'), 'Nazione', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_IndirizzoType_Nazione', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 491, 6), )
 
-    
+
     Nazione = property(__Nazione.value, __Nazione.set, None, None)
 
     _ElementMap.update({
@@ -2101,7 +2119,7 @@ class IndirizzoType (pyxb.binding.basis.complexTypeDefinition):
         __Nazione.name() : __Nazione
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.IndirizzoType = IndirizzoType
 Namespace.addCategoryObject('typeBinding', 'IndirizzoType', IndirizzoType)
@@ -2118,18 +2136,18 @@ class FatturaPrincipaleType (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element NumeroFatturaPrincipale uses Python identifier NumeroFatturaPrincipale
     __NumeroFatturaPrincipale = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'NumeroFatturaPrincipale'), 'NumeroFatturaPrincipale', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_FatturaPrincipaleType_NumeroFatturaPrincipale', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 496, 6), )
 
-    
+
     NumeroFatturaPrincipale = property(__NumeroFatturaPrincipale.value, __NumeroFatturaPrincipale.set, None, None)
 
-    
+
     # Element DataFatturaPrincipale uses Python identifier DataFatturaPrincipale
     __DataFatturaPrincipale = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'DataFatturaPrincipale'), 'DataFatturaPrincipale', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_FatturaPrincipaleType_DataFatturaPrincipale', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 497, 6), )
 
-    
+
     DataFatturaPrincipale = property(__DataFatturaPrincipale.value, __DataFatturaPrincipale.set, None, None)
 
     _ElementMap.update({
@@ -2137,7 +2155,7 @@ class FatturaPrincipaleType (pyxb.binding.basis.complexTypeDefinition):
         __DataFatturaPrincipale.name() : __DataFatturaPrincipale
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.FatturaPrincipaleType = FatturaPrincipaleType
 Namespace.addCategoryObject('typeBinding', 'FatturaPrincipaleType', FatturaPrincipaleType)
@@ -2156,46 +2174,46 @@ class CedentePrestatoreType (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element DatiAnagrafici uses Python identifier DatiAnagrafici
     __DatiAnagrafici = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'DatiAnagrafici'), 'DatiAnagrafici', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_CedentePrestatoreType_DatiAnagrafici', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 522, 6), )
 
-    
+
     DatiAnagrafici = property(__DatiAnagrafici.value, __DatiAnagrafici.set, None, None)
 
-    
+
     # Element Sede uses Python identifier Sede
     __Sede = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'Sede'), 'Sede', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_CedentePrestatoreType_Sede', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 523, 6), )
 
-    
+
     Sede = property(__Sede.value, __Sede.set, None, None)
 
-    
+
     # Element StabileOrganizzazione uses Python identifier StabileOrganizzazione
     __StabileOrganizzazione = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'StabileOrganizzazione'), 'StabileOrganizzazione', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_CedentePrestatoreType_StabileOrganizzazione', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 524, 6), )
 
-    
+
     StabileOrganizzazione = property(__StabileOrganizzazione.value, __StabileOrganizzazione.set, None, None)
 
-    
+
     # Element IscrizioneREA uses Python identifier IscrizioneREA
     __IscrizioneREA = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'IscrizioneREA'), 'IscrizioneREA', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_CedentePrestatoreType_IscrizioneREA', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 525, 6), )
 
-    
+
     IscrizioneREA = property(__IscrizioneREA.value, __IscrizioneREA.set, None, None)
 
-    
+
     # Element Contatti uses Python identifier Contatti
     __Contatti = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'Contatti'), 'Contatti', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_CedentePrestatoreType_Contatti', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 526, 6), )
 
-    
+
     Contatti = property(__Contatti.value, __Contatti.set, None, None)
 
-    
+
     # Element RiferimentoAmministrazione uses Python identifier RiferimentoAmministrazione
     __RiferimentoAmministrazione = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'RiferimentoAmministrazione'), 'RiferimentoAmministrazione', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_CedentePrestatoreType_RiferimentoAmministrazione', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 527, 6), )
 
-    
+
     RiferimentoAmministrazione = property(__RiferimentoAmministrazione.value, __RiferimentoAmministrazione.set, None, None)
 
     _ElementMap.update({
@@ -2207,7 +2225,7 @@ class CedentePrestatoreType (pyxb.binding.basis.complexTypeDefinition):
         __RiferimentoAmministrazione.name() : __RiferimentoAmministrazione
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.CedentePrestatoreType = CedentePrestatoreType
 Namespace.addCategoryObject('typeBinding', 'CedentePrestatoreType', CedentePrestatoreType)
@@ -2224,60 +2242,60 @@ class DatiAnagraficiCedenteType (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element IdFiscaleIVA uses Python identifier IdFiscaleIVA
     __IdFiscaleIVA = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'IdFiscaleIVA'), 'IdFiscaleIVA', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiAnagraficiCedenteType_IdFiscaleIVA', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 532, 6), )
 
-    
+
     IdFiscaleIVA = property(__IdFiscaleIVA.value, __IdFiscaleIVA.set, None, None)
 
-    
+
     # Element CodiceFiscale uses Python identifier CodiceFiscale
     __CodiceFiscale = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'CodiceFiscale'), 'CodiceFiscale', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiAnagraficiCedenteType_CodiceFiscale', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 533, 6), )
 
-    
+
     CodiceFiscale = property(__CodiceFiscale.value, __CodiceFiscale.set, None, None)
 
-    
+
     # Element Anagrafica uses Python identifier Anagrafica
     __Anagrafica = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'Anagrafica'), 'Anagrafica', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiAnagraficiCedenteType_Anagrafica', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 534, 6), )
 
-    
+
     Anagrafica = property(__Anagrafica.value, __Anagrafica.set, None, None)
 
-    
+
     # Element AlboProfessionale uses Python identifier AlboProfessionale
     __AlboProfessionale = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'AlboProfessionale'), 'AlboProfessionale', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiAnagraficiCedenteType_AlboProfessionale', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 535, 6), )
 
-    
+
     AlboProfessionale = property(__AlboProfessionale.value, __AlboProfessionale.set, None, None)
 
-    
+
     # Element ProvinciaAlbo uses Python identifier ProvinciaAlbo
     __ProvinciaAlbo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'ProvinciaAlbo'), 'ProvinciaAlbo', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiAnagraficiCedenteType_ProvinciaAlbo', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 536, 6), )
 
-    
+
     ProvinciaAlbo = property(__ProvinciaAlbo.value, __ProvinciaAlbo.set, None, None)
 
-    
+
     # Element NumeroIscrizioneAlbo uses Python identifier NumeroIscrizioneAlbo
     __NumeroIscrizioneAlbo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'NumeroIscrizioneAlbo'), 'NumeroIscrizioneAlbo', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiAnagraficiCedenteType_NumeroIscrizioneAlbo', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 537, 6), )
 
-    
+
     NumeroIscrizioneAlbo = property(__NumeroIscrizioneAlbo.value, __NumeroIscrizioneAlbo.set, None, None)
 
-    
+
     # Element DataIscrizioneAlbo uses Python identifier DataIscrizioneAlbo
     __DataIscrizioneAlbo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'DataIscrizioneAlbo'), 'DataIscrizioneAlbo', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiAnagraficiCedenteType_DataIscrizioneAlbo', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 538, 6), )
 
-    
+
     DataIscrizioneAlbo = property(__DataIscrizioneAlbo.value, __DataIscrizioneAlbo.set, None, None)
 
-    
+
     # Element RegimeFiscale uses Python identifier RegimeFiscale
     __RegimeFiscale = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'RegimeFiscale'), 'RegimeFiscale', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiAnagraficiCedenteType_RegimeFiscale', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 539, 6), )
 
-    
+
     RegimeFiscale = property(__RegimeFiscale.value, __RegimeFiscale.set, None, None)
 
     _ElementMap.update({
@@ -2291,7 +2309,7 @@ class DatiAnagraficiCedenteType (pyxb.binding.basis.complexTypeDefinition):
         __RegimeFiscale.name() : __RegimeFiscale
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.DatiAnagraficiCedenteType = DatiAnagraficiCedenteType
 Namespace.addCategoryObject('typeBinding', 'DatiAnagraficiCedenteType', DatiAnagraficiCedenteType)
@@ -2310,39 +2328,39 @@ class AnagraficaType (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element Denominazione uses Python identifier Denominazione
     __Denominazione = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'Denominazione'), 'Denominazione', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_AnagraficaType_Denominazione', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 647, 10), )
 
-    
+
     Denominazione = property(__Denominazione.value, __Denominazione.set, None, None)
 
-    
+
     # Element Nome uses Python identifier Nome
     __Nome = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'Nome'), 'Nome', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_AnagraficaType_Nome', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 650, 10), )
 
-    
+
     Nome = property(__Nome.value, __Nome.set, None, None)
 
-    
+
     # Element Cognome uses Python identifier Cognome
     __Cognome = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'Cognome'), 'Cognome', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_AnagraficaType_Cognome', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 651, 10), )
 
-    
+
     Cognome = property(__Cognome.value, __Cognome.set, None, None)
 
-    
+
     # Element Titolo uses Python identifier Titolo
     __Titolo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'Titolo'), 'Titolo', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_AnagraficaType_Titolo', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 654, 6), )
 
-    
+
     Titolo = property(__Titolo.value, __Titolo.set, None, None)
 
-    
+
     # Element CodEORI uses Python identifier CodEORI
     __CodEORI = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'CodEORI'), 'CodEORI', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_AnagraficaType_CodEORI', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 655, 6), )
 
-    
+
     CodEORI = property(__CodEORI.value, __CodEORI.set, None, None)
 
     _ElementMap.update({
@@ -2353,7 +2371,7 @@ class AnagraficaType (pyxb.binding.basis.complexTypeDefinition):
         __CodEORI.name() : __CodEORI
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.AnagraficaType = AnagraficaType
 Namespace.addCategoryObject('typeBinding', 'AnagraficaType', AnagraficaType)
@@ -2370,32 +2388,32 @@ class DatiAnagraficiVettoreType (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element IdFiscaleIVA uses Python identifier IdFiscaleIVA
     __IdFiscaleIVA = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'IdFiscaleIVA'), 'IdFiscaleIVA', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiAnagraficiVettoreType_IdFiscaleIVA', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 660, 6), )
 
-    
+
     IdFiscaleIVA = property(__IdFiscaleIVA.value, __IdFiscaleIVA.set, None, None)
 
-    
+
     # Element CodiceFiscale uses Python identifier CodiceFiscale
     __CodiceFiscale = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'CodiceFiscale'), 'CodiceFiscale', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiAnagraficiVettoreType_CodiceFiscale', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 661, 6), )
 
-    
+
     CodiceFiscale = property(__CodiceFiscale.value, __CodiceFiscale.set, None, None)
 
-    
+
     # Element Anagrafica uses Python identifier Anagrafica
     __Anagrafica = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'Anagrafica'), 'Anagrafica', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiAnagraficiVettoreType_Anagrafica', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 662, 6), )
 
-    
+
     Anagrafica = property(__Anagrafica.value, __Anagrafica.set, None, None)
 
-    
+
     # Element NumeroLicenzaGuida uses Python identifier NumeroLicenzaGuida
     __NumeroLicenzaGuida = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'NumeroLicenzaGuida'), 'NumeroLicenzaGuida', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiAnagraficiVettoreType_NumeroLicenzaGuida', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 663, 6), )
 
-    
+
     NumeroLicenzaGuida = property(__NumeroLicenzaGuida.value, __NumeroLicenzaGuida.set, None, None)
 
     _ElementMap.update({
@@ -2405,7 +2423,7 @@ class DatiAnagraficiVettoreType (pyxb.binding.basis.complexTypeDefinition):
         __NumeroLicenzaGuida.name() : __NumeroLicenzaGuida
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.DatiAnagraficiVettoreType = DatiAnagraficiVettoreType
 Namespace.addCategoryObject('typeBinding', 'DatiAnagraficiVettoreType', DatiAnagraficiVettoreType)
@@ -2422,39 +2440,39 @@ class IscrizioneREAType (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element Ufficio uses Python identifier Ufficio
     __Ufficio = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'Ufficio'), 'Ufficio', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_IscrizioneREAType_Ufficio', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 668, 6), )
 
-    
+
     Ufficio = property(__Ufficio.value, __Ufficio.set, None, None)
 
-    
+
     # Element NumeroREA uses Python identifier NumeroREA
     __NumeroREA = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'NumeroREA'), 'NumeroREA', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_IscrizioneREAType_NumeroREA', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 669, 6), )
 
-    
+
     NumeroREA = property(__NumeroREA.value, __NumeroREA.set, None, None)
 
-    
+
     # Element CapitaleSociale uses Python identifier CapitaleSociale
     __CapitaleSociale = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'CapitaleSociale'), 'CapitaleSociale', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_IscrizioneREAType_CapitaleSociale', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 670, 6), )
 
-    
+
     CapitaleSociale = property(__CapitaleSociale.value, __CapitaleSociale.set, None, None)
 
-    
+
     # Element SocioUnico uses Python identifier SocioUnico
     __SocioUnico = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'SocioUnico'), 'SocioUnico', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_IscrizioneREAType_SocioUnico', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 671, 6), )
 
-    
+
     SocioUnico = property(__SocioUnico.value, __SocioUnico.set, None, None)
 
-    
+
     # Element StatoLiquidazione uses Python identifier StatoLiquidazione
     __StatoLiquidazione = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'StatoLiquidazione'), 'StatoLiquidazione', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_IscrizioneREAType_StatoLiquidazione', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 672, 6), )
 
-    
+
     StatoLiquidazione = property(__StatoLiquidazione.value, __StatoLiquidazione.set, None, None)
 
     _ElementMap.update({
@@ -2465,7 +2483,7 @@ class IscrizioneREAType (pyxb.binding.basis.complexTypeDefinition):
         __StatoLiquidazione.name() : __StatoLiquidazione
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.IscrizioneREAType = IscrizioneREAType
 Namespace.addCategoryObject('typeBinding', 'IscrizioneREAType', IscrizioneREAType)
@@ -2482,25 +2500,25 @@ class ContattiType (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element Telefono uses Python identifier Telefono
     __Telefono = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'Telefono'), 'Telefono', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_ContattiType_Telefono', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 677, 6), )
 
-    
+
     Telefono = property(__Telefono.value, __Telefono.set, None, None)
 
-    
+
     # Element Fax uses Python identifier Fax
     __Fax = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'Fax'), 'Fax', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_ContattiType_Fax', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 678, 6), )
 
-    
+
     Fax = property(__Fax.value, __Fax.set, None, None)
 
-    
+
     # Element Email uses Python identifier Email
     __Email = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'Email'), 'Email', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_ContattiType_Email', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 679, 6), )
 
-    
+
     Email = property(__Email.value, __Email.set, None, None)
 
     _ElementMap.update({
@@ -2509,7 +2527,7 @@ class ContattiType (pyxb.binding.basis.complexTypeDefinition):
         __Email.name() : __Email
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.ContattiType = ContattiType
 Namespace.addCategoryObject('typeBinding', 'ContattiType', ContattiType)
@@ -2528,18 +2546,18 @@ class RappresentanteFiscaleType (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element DatiAnagrafici uses Python identifier DatiAnagrafici
     __DatiAnagrafici = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'DatiAnagrafici'), 'DatiAnagrafici', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_RappresentanteFiscaleType_DatiAnagrafici', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 689, 6), )
 
-    
+
     DatiAnagrafici = property(__DatiAnagrafici.value, __DatiAnagrafici.set, None, None)
 
     _ElementMap.update({
         __DatiAnagrafici.name() : __DatiAnagrafici
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.RappresentanteFiscaleType = RappresentanteFiscaleType
 Namespace.addCategoryObject('typeBinding', 'RappresentanteFiscaleType', RappresentanteFiscaleType)
@@ -2556,25 +2574,25 @@ class DatiAnagraficiRappresentanteType (pyxb.binding.basis.complexTypeDefinition
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element IdFiscaleIVA uses Python identifier IdFiscaleIVA
     __IdFiscaleIVA = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'IdFiscaleIVA'), 'IdFiscaleIVA', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiAnagraficiRappresentanteType_IdFiscaleIVA', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 694, 6), )
 
-    
+
     IdFiscaleIVA = property(__IdFiscaleIVA.value, __IdFiscaleIVA.set, None, None)
 
-    
+
     # Element CodiceFiscale uses Python identifier CodiceFiscale
     __CodiceFiscale = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'CodiceFiscale'), 'CodiceFiscale', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiAnagraficiRappresentanteType_CodiceFiscale', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 695, 6), )
 
-    
+
     CodiceFiscale = property(__CodiceFiscale.value, __CodiceFiscale.set, None, None)
 
-    
+
     # Element Anagrafica uses Python identifier Anagrafica
     __Anagrafica = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'Anagrafica'), 'Anagrafica', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiAnagraficiRappresentanteType_Anagrafica', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 696, 6), )
 
-    
+
     Anagrafica = property(__Anagrafica.value, __Anagrafica.set, None, None)
 
     _ElementMap.update({
@@ -2583,7 +2601,7 @@ class DatiAnagraficiRappresentanteType (pyxb.binding.basis.complexTypeDefinition
         __Anagrafica.name() : __Anagrafica
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.DatiAnagraficiRappresentanteType = DatiAnagraficiRappresentanteType
 Namespace.addCategoryObject('typeBinding', 'DatiAnagraficiRappresentanteType', DatiAnagraficiRappresentanteType)
@@ -2600,32 +2618,32 @@ class CessionarioCommittenteType (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element DatiAnagrafici uses Python identifier DatiAnagrafici
     __DatiAnagrafici = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'DatiAnagrafici'), 'DatiAnagrafici', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_CessionarioCommittenteType_DatiAnagrafici', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 704, 6), )
 
-    
+
     DatiAnagrafici = property(__DatiAnagrafici.value, __DatiAnagrafici.set, None, None)
 
-    
+
     # Element Sede uses Python identifier Sede
     __Sede = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'Sede'), 'Sede', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_CessionarioCommittenteType_Sede', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 705, 6), )
 
-    
+
     Sede = property(__Sede.value, __Sede.set, None, None)
 
-    
+
     # Element StabileOrganizzazione uses Python identifier StabileOrganizzazione
     __StabileOrganizzazione = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'StabileOrganizzazione'), 'StabileOrganizzazione', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_CessionarioCommittenteType_StabileOrganizzazione', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 706, 3), )
 
-    
+
     StabileOrganizzazione = property(__StabileOrganizzazione.value, __StabileOrganizzazione.set, None, None)
 
-    
+
     # Element RappresentanteFiscale uses Python identifier RappresentanteFiscale
     __RappresentanteFiscale = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'RappresentanteFiscale'), 'RappresentanteFiscale', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_CessionarioCommittenteType_RappresentanteFiscale', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 707, 6), )
 
-    
+
     RappresentanteFiscale = property(__RappresentanteFiscale.value, __RappresentanteFiscale.set, None, None)
 
     _ElementMap.update({
@@ -2635,7 +2653,7 @@ class CessionarioCommittenteType (pyxb.binding.basis.complexTypeDefinition):
         __RappresentanteFiscale.name() : __RappresentanteFiscale
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.CessionarioCommittenteType = CessionarioCommittenteType
 Namespace.addCategoryObject('typeBinding', 'CessionarioCommittenteType', CessionarioCommittenteType)
@@ -2652,32 +2670,32 @@ class RappresentanteFiscaleCessionarioType (pyxb.binding.basis.complexTypeDefini
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element IdFiscaleIVA uses Python identifier IdFiscaleIVA
     __IdFiscaleIVA = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'IdFiscaleIVA'), 'IdFiscaleIVA', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_RappresentanteFiscaleCessionarioType_IdFiscaleIVA', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 712, 3), )
 
-    
+
     IdFiscaleIVA = property(__IdFiscaleIVA.value, __IdFiscaleIVA.set, None, None)
 
-    
+
     # Element Denominazione uses Python identifier Denominazione
     __Denominazione = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'Denominazione'), 'Denominazione', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_RappresentanteFiscaleCessionarioType_Denominazione', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 715, 10), )
 
-    
+
     Denominazione = property(__Denominazione.value, __Denominazione.set, None, None)
 
-    
+
     # Element Nome uses Python identifier Nome
     __Nome = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'Nome'), 'Nome', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_RappresentanteFiscaleCessionarioType_Nome', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 718, 10), )
 
-    
+
     Nome = property(__Nome.value, __Nome.set, None, None)
 
-    
+
     # Element Cognome uses Python identifier Cognome
     __Cognome = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'Cognome'), 'Cognome', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_RappresentanteFiscaleCessionarioType_Cognome', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 719, 10), )
 
-    
+
     Cognome = property(__Cognome.value, __Cognome.set, None, None)
 
     _ElementMap.update({
@@ -2687,7 +2705,7 @@ class RappresentanteFiscaleCessionarioType (pyxb.binding.basis.complexTypeDefini
         __Cognome.name() : __Cognome
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.RappresentanteFiscaleCessionarioType = RappresentanteFiscaleCessionarioType
 Namespace.addCategoryObject('typeBinding', 'RappresentanteFiscaleCessionarioType', RappresentanteFiscaleCessionarioType)
@@ -2704,25 +2722,25 @@ class DatiAnagraficiCessionarioType (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element IdFiscaleIVA uses Python identifier IdFiscaleIVA
     __IdFiscaleIVA = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'IdFiscaleIVA'), 'IdFiscaleIVA', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiAnagraficiCessionarioType_IdFiscaleIVA', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 726, 6), )
 
-    
+
     IdFiscaleIVA = property(__IdFiscaleIVA.value, __IdFiscaleIVA.set, None, None)
 
-    
+
     # Element CodiceFiscale uses Python identifier CodiceFiscale
     __CodiceFiscale = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'CodiceFiscale'), 'CodiceFiscale', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiAnagraficiCessionarioType_CodiceFiscale', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 727, 6), )
 
-    
+
     CodiceFiscale = property(__CodiceFiscale.value, __CodiceFiscale.set, None, None)
 
-    
+
     # Element Anagrafica uses Python identifier Anagrafica
     __Anagrafica = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'Anagrafica'), 'Anagrafica', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiAnagraficiCessionarioType_Anagrafica', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 728, 6), )
 
-    
+
     Anagrafica = property(__Anagrafica.value, __Anagrafica.set, None, None)
 
     _ElementMap.update({
@@ -2731,7 +2749,7 @@ class DatiAnagraficiCessionarioType (pyxb.binding.basis.complexTypeDefinition):
         __Anagrafica.name() : __Anagrafica
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.DatiAnagraficiCessionarioType = DatiAnagraficiCessionarioType
 Namespace.addCategoryObject('typeBinding', 'DatiAnagraficiCessionarioType', DatiAnagraficiCessionarioType)
@@ -2750,18 +2768,18 @@ class DatiBeniServiziType (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element DettaglioLinee uses Python identifier DettaglioLinee
     __DettaglioLinee = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'DettaglioLinee'), 'DettaglioLinee', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiBeniServiziType_DettaglioLinee', True, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 738, 6), )
 
-    
+
     DettaglioLinee = property(__DettaglioLinee.value, __DettaglioLinee.set, None, None)
 
-    
+
     # Element DatiRiepilogo uses Python identifier DatiRiepilogo
     __DatiRiepilogo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'DatiRiepilogo'), 'DatiRiepilogo', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiBeniServiziType_DatiRiepilogo', True, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 739, 6), )
 
-    
+
     DatiRiepilogo = property(__DatiRiepilogo.value, __DatiRiepilogo.set, None, None)
 
     _ElementMap.update({
@@ -2769,7 +2787,7 @@ class DatiBeniServiziType (pyxb.binding.basis.complexTypeDefinition):
         __DatiRiepilogo.name() : __DatiRiepilogo
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.DatiBeniServiziType = DatiBeniServiziType
 Namespace.addCategoryObject('typeBinding', 'DatiBeniServiziType', DatiBeniServiziType)
@@ -2791,18 +2809,18 @@ class DatiVeicoliType (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element Data uses Python identifier Data
     __Data = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'Data'), 'Data', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiVeicoliType_Data', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 752, 6), )
 
-    
+
     Data = property(__Data.value, __Data.set, None, None)
 
-    
+
     # Element TotalePercorso uses Python identifier TotalePercorso
     __TotalePercorso = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'TotalePercorso'), 'TotalePercorso', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiVeicoliType_TotalePercorso', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 753, 6), )
 
-    
+
     TotalePercorso = property(__TotalePercorso.value, __TotalePercorso.set, None, None)
 
     _ElementMap.update({
@@ -2810,7 +2828,7 @@ class DatiVeicoliType (pyxb.binding.basis.complexTypeDefinition):
         __TotalePercorso.name() : __TotalePercorso
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.DatiVeicoliType = DatiVeicoliType
 Namespace.addCategoryObject('typeBinding', 'DatiVeicoliType', DatiVeicoliType)
@@ -2829,18 +2847,18 @@ class DatiPagamentoType (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element CondizioniPagamento uses Python identifier CondizioniPagamento
     __CondizioniPagamento = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'CondizioniPagamento'), 'CondizioniPagamento', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiPagamentoType_CondizioniPagamento', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 763, 6), )
 
-    
+
     CondizioniPagamento = property(__CondizioniPagamento.value, __CondizioniPagamento.set, None, None)
 
-    
+
     # Element DettaglioPagamento uses Python identifier DettaglioPagamento
     __DettaglioPagamento = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'DettaglioPagamento'), 'DettaglioPagamento', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiPagamentoType_DettaglioPagamento', True, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 764, 6), )
 
-    
+
     DettaglioPagamento = property(__DettaglioPagamento.value, __DettaglioPagamento.set, None, None)
 
     _ElementMap.update({
@@ -2848,7 +2866,7 @@ class DatiPagamentoType (pyxb.binding.basis.complexTypeDefinition):
         __DettaglioPagamento.name() : __DettaglioPagamento
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.DatiPagamentoType = DatiPagamentoType
 Namespace.addCategoryObject('typeBinding', 'DatiPagamentoType', DatiPagamentoType)
@@ -2865,151 +2883,151 @@ class DettaglioPagamentoType (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element Beneficiario uses Python identifier Beneficiario
     __Beneficiario = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'Beneficiario'), 'Beneficiario', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DettaglioPagamentoType_Beneficiario', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 790, 6), )
 
-    
+
     Beneficiario = property(__Beneficiario.value, __Beneficiario.set, None, None)
 
-    
+
     # Element ModalitaPagamento uses Python identifier ModalitaPagamento
     __ModalitaPagamento = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'ModalitaPagamento'), 'ModalitaPagamento', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DettaglioPagamentoType_ModalitaPagamento', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 791, 6), )
 
-    
+
     ModalitaPagamento = property(__ModalitaPagamento.value, __ModalitaPagamento.set, None, None)
 
-    
+
     # Element DataRiferimentoTerminiPagamento uses Python identifier DataRiferimentoTerminiPagamento
     __DataRiferimentoTerminiPagamento = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'DataRiferimentoTerminiPagamento'), 'DataRiferimentoTerminiPagamento', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DettaglioPagamentoType_DataRiferimentoTerminiPagamento', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 792, 6), )
 
-    
+
     DataRiferimentoTerminiPagamento = property(__DataRiferimentoTerminiPagamento.value, __DataRiferimentoTerminiPagamento.set, None, None)
 
-    
+
     # Element GiorniTerminiPagamento uses Python identifier GiorniTerminiPagamento
     __GiorniTerminiPagamento = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'GiorniTerminiPagamento'), 'GiorniTerminiPagamento', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DettaglioPagamentoType_GiorniTerminiPagamento', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 793, 6), )
 
-    
+
     GiorniTerminiPagamento = property(__GiorniTerminiPagamento.value, __GiorniTerminiPagamento.set, None, None)
 
-    
+
     # Element DataScadenzaPagamento uses Python identifier DataScadenzaPagamento
     __DataScadenzaPagamento = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'DataScadenzaPagamento'), 'DataScadenzaPagamento', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DettaglioPagamentoType_DataScadenzaPagamento', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 794, 6), )
 
-    
+
     DataScadenzaPagamento = property(__DataScadenzaPagamento.value, __DataScadenzaPagamento.set, None, None)
 
-    
+
     # Element ImportoPagamento uses Python identifier ImportoPagamento
     __ImportoPagamento = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'ImportoPagamento'), 'ImportoPagamento', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DettaglioPagamentoType_ImportoPagamento', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 795, 6), )
 
-    
+
     ImportoPagamento = property(__ImportoPagamento.value, __ImportoPagamento.set, None, None)
 
-    
+
     # Element CodUfficioPostale uses Python identifier CodUfficioPostale
     __CodUfficioPostale = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'CodUfficioPostale'), 'CodUfficioPostale', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DettaglioPagamentoType_CodUfficioPostale', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 796, 6), )
 
-    
+
     CodUfficioPostale = property(__CodUfficioPostale.value, __CodUfficioPostale.set, None, None)
 
-    
+
     # Element CognomeQuietanzante uses Python identifier CognomeQuietanzante
     __CognomeQuietanzante = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'CognomeQuietanzante'), 'CognomeQuietanzante', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DettaglioPagamentoType_CognomeQuietanzante', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 797, 6), )
 
-    
+
     CognomeQuietanzante = property(__CognomeQuietanzante.value, __CognomeQuietanzante.set, None, None)
 
-    
+
     # Element NomeQuietanzante uses Python identifier NomeQuietanzante
     __NomeQuietanzante = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'NomeQuietanzante'), 'NomeQuietanzante', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DettaglioPagamentoType_NomeQuietanzante', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 798, 6), )
 
-    
+
     NomeQuietanzante = property(__NomeQuietanzante.value, __NomeQuietanzante.set, None, None)
 
-    
+
     # Element CFQuietanzante uses Python identifier CFQuietanzante
     __CFQuietanzante = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'CFQuietanzante'), 'CFQuietanzante', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DettaglioPagamentoType_CFQuietanzante', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 799, 6), )
 
-    
+
     CFQuietanzante = property(__CFQuietanzante.value, __CFQuietanzante.set, None, None)
 
-    
+
     # Element TitoloQuietanzante uses Python identifier TitoloQuietanzante
     __TitoloQuietanzante = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'TitoloQuietanzante'), 'TitoloQuietanzante', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DettaglioPagamentoType_TitoloQuietanzante', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 800, 6), )
 
-    
+
     TitoloQuietanzante = property(__TitoloQuietanzante.value, __TitoloQuietanzante.set, None, None)
 
-    
+
     # Element IstitutoFinanziario uses Python identifier IstitutoFinanziario
     __IstitutoFinanziario = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'IstitutoFinanziario'), 'IstitutoFinanziario', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DettaglioPagamentoType_IstitutoFinanziario', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 801, 6), )
 
-    
+
     IstitutoFinanziario = property(__IstitutoFinanziario.value, __IstitutoFinanziario.set, None, None)
 
-    
+
     # Element IBAN uses Python identifier IBAN
     __IBAN = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'IBAN'), 'IBAN', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DettaglioPagamentoType_IBAN', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 802, 6), )
 
-    
+
     IBAN = property(__IBAN.value, __IBAN.set, None, None)
 
-    
+
     # Element ABI uses Python identifier ABI
     __ABI = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'ABI'), 'ABI', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DettaglioPagamentoType_ABI', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 803, 6), )
 
-    
+
     ABI = property(__ABI.value, __ABI.set, None, None)
 
-    
+
     # Element CAB uses Python identifier CAB
     __CAB = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'CAB'), 'CAB', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DettaglioPagamentoType_CAB', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 804, 6), )
 
-    
+
     CAB = property(__CAB.value, __CAB.set, None, None)
 
-    
+
     # Element BIC uses Python identifier BIC
     __BIC = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'BIC'), 'BIC', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DettaglioPagamentoType_BIC', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 805, 6), )
 
-    
+
     BIC = property(__BIC.value, __BIC.set, None, None)
 
-    
+
     # Element ScontoPagamentoAnticipato uses Python identifier ScontoPagamentoAnticipato
     __ScontoPagamentoAnticipato = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'ScontoPagamentoAnticipato'), 'ScontoPagamentoAnticipato', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DettaglioPagamentoType_ScontoPagamentoAnticipato', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 806, 6), )
 
-    
+
     ScontoPagamentoAnticipato = property(__ScontoPagamentoAnticipato.value, __ScontoPagamentoAnticipato.set, None, None)
 
-    
+
     # Element DataLimitePagamentoAnticipato uses Python identifier DataLimitePagamentoAnticipato
     __DataLimitePagamentoAnticipato = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'DataLimitePagamentoAnticipato'), 'DataLimitePagamentoAnticipato', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DettaglioPagamentoType_DataLimitePagamentoAnticipato', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 807, 6), )
 
-    
+
     DataLimitePagamentoAnticipato = property(__DataLimitePagamentoAnticipato.value, __DataLimitePagamentoAnticipato.set, None, None)
 
-    
+
     # Element PenalitaPagamentiRitardati uses Python identifier PenalitaPagamentiRitardati
     __PenalitaPagamentiRitardati = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'PenalitaPagamentiRitardati'), 'PenalitaPagamentiRitardati', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DettaglioPagamentoType_PenalitaPagamentiRitardati', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 808, 6), )
 
-    
+
     PenalitaPagamentiRitardati = property(__PenalitaPagamentiRitardati.value, __PenalitaPagamentiRitardati.set, None, None)
 
-    
+
     # Element DataDecorrenzaPenale uses Python identifier DataDecorrenzaPenale
     __DataDecorrenzaPenale = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'DataDecorrenzaPenale'), 'DataDecorrenzaPenale', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DettaglioPagamentoType_DataDecorrenzaPenale', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 809, 6), )
 
-    
+
     DataDecorrenzaPenale = property(__DataDecorrenzaPenale.value, __DataDecorrenzaPenale.set, None, None)
 
-    
+
     # Element CodicePagamento uses Python identifier CodicePagamento
     __CodicePagamento = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'CodicePagamento'), 'CodicePagamento', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DettaglioPagamentoType_CodicePagamento', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 810, 6), )
 
-    
+
     CodicePagamento = property(__CodicePagamento.value, __CodicePagamento.set, None, None)
 
     _ElementMap.update({
@@ -3036,7 +3054,7 @@ class DettaglioPagamentoType (pyxb.binding.basis.complexTypeDefinition):
         __CodicePagamento.name() : __CodicePagamento
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.DettaglioPagamentoType = DettaglioPagamentoType
 Namespace.addCategoryObject('typeBinding', 'DettaglioPagamentoType', DettaglioPagamentoType)
@@ -3057,18 +3075,18 @@ class TerzoIntermediarioSoggettoEmittenteType (pyxb.binding.basis.complexTypeDef
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element DatiAnagrafici uses Python identifier DatiAnagrafici
     __DatiAnagrafici = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'DatiAnagrafici'), 'DatiAnagrafici', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_TerzoIntermediarioSoggettoEmittenteType_DatiAnagrafici', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 947, 6), )
 
-    
+
     DatiAnagrafici = property(__DatiAnagrafici.value, __DatiAnagrafici.set, None, None)
 
     _ElementMap.update({
         __DatiAnagrafici.name() : __DatiAnagrafici
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.TerzoIntermediarioSoggettoEmittenteType = TerzoIntermediarioSoggettoEmittenteType
 Namespace.addCategoryObject('typeBinding', 'TerzoIntermediarioSoggettoEmittenteType', TerzoIntermediarioSoggettoEmittenteType)
@@ -3085,25 +3103,25 @@ class DatiAnagraficiTerzoIntermediarioType (pyxb.binding.basis.complexTypeDefini
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element IdFiscaleIVA uses Python identifier IdFiscaleIVA
     __IdFiscaleIVA = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'IdFiscaleIVA'), 'IdFiscaleIVA', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiAnagraficiTerzoIntermediarioType_IdFiscaleIVA', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 952, 6), )
 
-    
+
     IdFiscaleIVA = property(__IdFiscaleIVA.value, __IdFiscaleIVA.set, None, None)
 
-    
+
     # Element CodiceFiscale uses Python identifier CodiceFiscale
     __CodiceFiscale = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'CodiceFiscale'), 'CodiceFiscale', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiAnagraficiTerzoIntermediarioType_CodiceFiscale', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 953, 6), )
 
-    
+
     CodiceFiscale = property(__CodiceFiscale.value, __CodiceFiscale.set, None, None)
 
-    
+
     # Element Anagrafica uses Python identifier Anagrafica
     __Anagrafica = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'Anagrafica'), 'Anagrafica', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiAnagraficiTerzoIntermediarioType_Anagrafica', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 954, 6), )
 
-    
+
     Anagrafica = property(__Anagrafica.value, __Anagrafica.set, None, None)
 
     _ElementMap.update({
@@ -3112,7 +3130,7 @@ class DatiAnagraficiTerzoIntermediarioType (pyxb.binding.basis.complexTypeDefini
         __Anagrafica.name() : __Anagrafica
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.DatiAnagraficiTerzoIntermediarioType = DatiAnagraficiTerzoIntermediarioType
 Namespace.addCategoryObject('typeBinding', 'DatiAnagraficiTerzoIntermediarioType', DatiAnagraficiTerzoIntermediarioType)
@@ -3131,39 +3149,39 @@ class AllegatiType (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element NomeAttachment uses Python identifier NomeAttachment
     __NomeAttachment = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'NomeAttachment'), 'NomeAttachment', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_AllegatiType_NomeAttachment', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 964, 6), )
 
-    
+
     NomeAttachment = property(__NomeAttachment.value, __NomeAttachment.set, None, None)
 
-    
+
     # Element AlgoritmoCompressione uses Python identifier AlgoritmoCompressione
     __AlgoritmoCompressione = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'AlgoritmoCompressione'), 'AlgoritmoCompressione', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_AllegatiType_AlgoritmoCompressione', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 965, 6), )
 
-    
+
     AlgoritmoCompressione = property(__AlgoritmoCompressione.value, __AlgoritmoCompressione.set, None, None)
 
-    
+
     # Element FormatoAttachment uses Python identifier FormatoAttachment
     __FormatoAttachment = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'FormatoAttachment'), 'FormatoAttachment', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_AllegatiType_FormatoAttachment', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 966, 6), )
 
-    
+
     FormatoAttachment = property(__FormatoAttachment.value, __FormatoAttachment.set, None, None)
 
-    
+
     # Element DescrizioneAttachment uses Python identifier DescrizioneAttachment
     __DescrizioneAttachment = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'DescrizioneAttachment'), 'DescrizioneAttachment', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_AllegatiType_DescrizioneAttachment', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 967, 6), )
 
-    
+
     DescrizioneAttachment = property(__DescrizioneAttachment.value, __DescrizioneAttachment.set, None, None)
 
-    
+
     # Element Attachment uses Python identifier Attachment
     __Attachment = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'Attachment'), 'Attachment', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_AllegatiType_Attachment', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 968, 6), )
 
-    
+
     Attachment = property(__Attachment.value, __Attachment.set, None, None)
 
     _ElementMap.update({
@@ -3174,7 +3192,7 @@ class AllegatiType (pyxb.binding.basis.complexTypeDefinition):
         __Attachment.name() : __Attachment
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.AllegatiType = AllegatiType
 Namespace.addCategoryObject('typeBinding', 'AllegatiType', AllegatiType)
@@ -3191,116 +3209,116 @@ class DettaglioLineeType (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element NumeroLinea uses Python identifier NumeroLinea
     __NumeroLinea = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'NumeroLinea'), 'NumeroLinea', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DettaglioLineeType_NumeroLinea', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 973, 6), )
 
-    
+
     NumeroLinea = property(__NumeroLinea.value, __NumeroLinea.set, None, None)
 
-    
+
     # Element TipoCessionePrestazione uses Python identifier TipoCessionePrestazione
     __TipoCessionePrestazione = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'TipoCessionePrestazione'), 'TipoCessionePrestazione', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DettaglioLineeType_TipoCessionePrestazione', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 974, 6), )
 
-    
+
     TipoCessionePrestazione = property(__TipoCessionePrestazione.value, __TipoCessionePrestazione.set, None, None)
 
-    
+
     # Element CodiceArticolo uses Python identifier CodiceArticolo
     __CodiceArticolo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'CodiceArticolo'), 'CodiceArticolo', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DettaglioLineeType_CodiceArticolo', True, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 975, 6), )
 
-    
+
     CodiceArticolo = property(__CodiceArticolo.value, __CodiceArticolo.set, None, None)
 
-    
+
     # Element Descrizione uses Python identifier Descrizione
     __Descrizione = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'Descrizione'), 'Descrizione', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DettaglioLineeType_Descrizione', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 976, 6), )
 
-    
+
     Descrizione = property(__Descrizione.value, __Descrizione.set, None, None)
 
-    
+
     # Element Quantita uses Python identifier Quantita
     __Quantita = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'Quantita'), 'Quantita', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DettaglioLineeType_Quantita', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 977, 6), )
 
-    
+
     Quantita = property(__Quantita.value, __Quantita.set, None, None)
 
-    
+
     # Element UnitaMisura uses Python identifier UnitaMisura
     __UnitaMisura = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'UnitaMisura'), 'UnitaMisura', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DettaglioLineeType_UnitaMisura', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 978, 6), )
 
-    
+
     UnitaMisura = property(__UnitaMisura.value, __UnitaMisura.set, None, None)
 
-    
+
     # Element DataInizioPeriodo uses Python identifier DataInizioPeriodo
     __DataInizioPeriodo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'DataInizioPeriodo'), 'DataInizioPeriodo', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DettaglioLineeType_DataInizioPeriodo', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 979, 6), )
 
-    
+
     DataInizioPeriodo = property(__DataInizioPeriodo.value, __DataInizioPeriodo.set, None, None)
 
-    
+
     # Element DataFinePeriodo uses Python identifier DataFinePeriodo
     __DataFinePeriodo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'DataFinePeriodo'), 'DataFinePeriodo', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DettaglioLineeType_DataFinePeriodo', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 980, 6), )
 
-    
+
     DataFinePeriodo = property(__DataFinePeriodo.value, __DataFinePeriodo.set, None, None)
 
-    
+
     # Element PrezzoUnitario uses Python identifier PrezzoUnitario
     __PrezzoUnitario = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'PrezzoUnitario'), 'PrezzoUnitario', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DettaglioLineeType_PrezzoUnitario', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 981, 6), )
 
-    
+
     PrezzoUnitario = property(__PrezzoUnitario.value, __PrezzoUnitario.set, None, None)
 
-    
+
     # Element ScontoMaggiorazione uses Python identifier ScontoMaggiorazione
     __ScontoMaggiorazione = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'ScontoMaggiorazione'), 'ScontoMaggiorazione', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DettaglioLineeType_ScontoMaggiorazione', True, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 982, 6), )
 
-    
+
     ScontoMaggiorazione = property(__ScontoMaggiorazione.value, __ScontoMaggiorazione.set, None, None)
 
-    
+
     # Element PrezzoTotale uses Python identifier PrezzoTotale
     __PrezzoTotale = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'PrezzoTotale'), 'PrezzoTotale', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DettaglioLineeType_PrezzoTotale', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 983, 6), )
 
-    
+
     PrezzoTotale = property(__PrezzoTotale.value, __PrezzoTotale.set, None, None)
 
-    
+
     # Element AliquotaIVA uses Python identifier AliquotaIVA
     __AliquotaIVA = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'AliquotaIVA'), 'AliquotaIVA', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DettaglioLineeType_AliquotaIVA', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 984, 6), )
 
-    
+
     AliquotaIVA = property(__AliquotaIVA.value, __AliquotaIVA.set, None, None)
 
-    
+
     # Element Ritenuta uses Python identifier Ritenuta
     __Ritenuta = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'Ritenuta'), 'Ritenuta', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DettaglioLineeType_Ritenuta', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 985, 6), )
 
-    
+
     Ritenuta = property(__Ritenuta.value, __Ritenuta.set, None, None)
 
-    
+
     # Element Natura uses Python identifier Natura
     __Natura = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'Natura'), 'Natura', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DettaglioLineeType_Natura', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 986, 6), )
 
-    
+
     Natura = property(__Natura.value, __Natura.set, None, None)
 
-    
+
     # Element RiferimentoAmministrazione uses Python identifier RiferimentoAmministrazione
     __RiferimentoAmministrazione = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'RiferimentoAmministrazione'), 'RiferimentoAmministrazione', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DettaglioLineeType_RiferimentoAmministrazione', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 987, 6), )
 
-    
+
     RiferimentoAmministrazione = property(__RiferimentoAmministrazione.value, __RiferimentoAmministrazione.set, None, None)
 
-    
+
     # Element AltriDatiGestionali uses Python identifier AltriDatiGestionali
     __AltriDatiGestionali = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'AltriDatiGestionali'), 'AltriDatiGestionali', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DettaglioLineeType_AltriDatiGestionali', True, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 988, 6), )
 
-    
+
     AltriDatiGestionali = property(__AltriDatiGestionali.value, __AltriDatiGestionali.set, None, None)
 
     _ElementMap.update({
@@ -3322,7 +3340,7 @@ class DettaglioLineeType (pyxb.binding.basis.complexTypeDefinition):
         __AltriDatiGestionali.name() : __AltriDatiGestionali
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.DettaglioLineeType = DettaglioLineeType
 Namespace.addCategoryObject('typeBinding', 'DettaglioLineeType', DettaglioLineeType)
@@ -3339,18 +3357,18 @@ class CodiceArticoloType (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element CodiceTipo uses Python identifier CodiceTipo
     __CodiceTipo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'CodiceTipo'), 'CodiceTipo', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_CodiceArticoloType_CodiceTipo', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 993, 6), )
 
-    
+
     CodiceTipo = property(__CodiceTipo.value, __CodiceTipo.set, None, None)
 
-    
+
     # Element CodiceValore uses Python identifier CodiceValore
     __CodiceValore = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'CodiceValore'), 'CodiceValore', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_CodiceArticoloType_CodiceValore', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 994, 6), )
 
-    
+
     CodiceValore = property(__CodiceValore.value, __CodiceValore.set, None, None)
 
     _ElementMap.update({
@@ -3358,7 +3376,7 @@ class CodiceArticoloType (pyxb.binding.basis.complexTypeDefinition):
         __CodiceValore.name() : __CodiceValore
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.CodiceArticoloType = CodiceArticoloType
 Namespace.addCategoryObject('typeBinding', 'CodiceArticoloType', CodiceArticoloType)
@@ -3375,32 +3393,32 @@ class AltriDatiGestionaliType (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element TipoDato uses Python identifier TipoDato
     __TipoDato = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'TipoDato'), 'TipoDato', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_AltriDatiGestionaliType_TipoDato', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 999, 6), )
 
-    
+
     TipoDato = property(__TipoDato.value, __TipoDato.set, None, None)
 
-    
+
     # Element RiferimentoTesto uses Python identifier RiferimentoTesto
     __RiferimentoTesto = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'RiferimentoTesto'), 'RiferimentoTesto', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_AltriDatiGestionaliType_RiferimentoTesto', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 1000, 6), )
 
-    
+
     RiferimentoTesto = property(__RiferimentoTesto.value, __RiferimentoTesto.set, None, None)
 
-    
+
     # Element RiferimentoNumero uses Python identifier RiferimentoNumero
     __RiferimentoNumero = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'RiferimentoNumero'), 'RiferimentoNumero', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_AltriDatiGestionaliType_RiferimentoNumero', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 1001, 6), )
 
-    
+
     RiferimentoNumero = property(__RiferimentoNumero.value, __RiferimentoNumero.set, None, None)
 
-    
+
     # Element RiferimentoData uses Python identifier RiferimentoData
     __RiferimentoData = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'RiferimentoData'), 'RiferimentoData', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_AltriDatiGestionaliType_RiferimentoData', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 1002, 6), )
 
-    
+
     RiferimentoData = property(__RiferimentoData.value, __RiferimentoData.set, None, None)
 
     _ElementMap.update({
@@ -3410,7 +3428,7 @@ class AltriDatiGestionaliType (pyxb.binding.basis.complexTypeDefinition):
         __RiferimentoData.name() : __RiferimentoData
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.AltriDatiGestionaliType = AltriDatiGestionaliType
 Namespace.addCategoryObject('typeBinding', 'AltriDatiGestionaliType', AltriDatiGestionaliType)
@@ -3427,60 +3445,60 @@ class DatiRiepilogoType (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element AliquotaIVA uses Python identifier AliquotaIVA
     __AliquotaIVA = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'AliquotaIVA'), 'AliquotaIVA', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiRiepilogoType_AliquotaIVA', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 1019, 6), )
 
-    
+
     AliquotaIVA = property(__AliquotaIVA.value, __AliquotaIVA.set, None, None)
 
-    
+
     # Element Natura uses Python identifier Natura
     __Natura = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'Natura'), 'Natura', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiRiepilogoType_Natura', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 1020, 6), )
 
-    
+
     Natura = property(__Natura.value, __Natura.set, None, None)
 
-    
+
     # Element SpeseAccessorie uses Python identifier SpeseAccessorie
     __SpeseAccessorie = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'SpeseAccessorie'), 'SpeseAccessorie', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiRiepilogoType_SpeseAccessorie', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 1021, 6), )
 
-    
+
     SpeseAccessorie = property(__SpeseAccessorie.value, __SpeseAccessorie.set, None, None)
 
-    
+
     # Element Arrotondamento uses Python identifier Arrotondamento
     __Arrotondamento = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'Arrotondamento'), 'Arrotondamento', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiRiepilogoType_Arrotondamento', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 1022, 6), )
 
-    
+
     Arrotondamento = property(__Arrotondamento.value, __Arrotondamento.set, None, None)
 
-    
+
     # Element ImponibileImporto uses Python identifier ImponibileImporto
     __ImponibileImporto = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'ImponibileImporto'), 'ImponibileImporto', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiRiepilogoType_ImponibileImporto', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 1023, 6), )
 
-    
+
     ImponibileImporto = property(__ImponibileImporto.value, __ImponibileImporto.set, None, None)
 
-    
+
     # Element Imposta uses Python identifier Imposta
     __Imposta = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'Imposta'), 'Imposta', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiRiepilogoType_Imposta', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 1024, 6), )
 
-    
+
     Imposta = property(__Imposta.value, __Imposta.set, None, None)
 
-    
+
     # Element EsigibilitaIVA uses Python identifier EsigibilitaIVA
     __EsigibilitaIVA = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'EsigibilitaIVA'), 'EsigibilitaIVA', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiRiepilogoType_EsigibilitaIVA', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 1025, 6), )
 
-    
+
     EsigibilitaIVA = property(__EsigibilitaIVA.value, __EsigibilitaIVA.set, None, None)
 
-    
+
     # Element RiferimentoNormativo uses Python identifier RiferimentoNormativo
     __RiferimentoNormativo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'RiferimentoNormativo'), 'RiferimentoNormativo', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_DatiRiepilogoType_RiferimentoNormativo', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 1026, 6), )
 
-    
+
     RiferimentoNormativo = property(__RiferimentoNormativo.value, __RiferimentoNormativo.set, None, None)
 
     _ElementMap.update({
@@ -3494,7 +3512,7 @@ class DatiRiepilogoType (pyxb.binding.basis.complexTypeDefinition):
         __RiferimentoNormativo.name() : __RiferimentoNormativo
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.DatiRiepilogoType = DatiRiepilogoType
 Namespace.addCategoryObject('typeBinding', 'DatiRiepilogoType', DatiRiepilogoType)
@@ -3511,33 +3529,33 @@ class FatturaElettronicaType (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element FatturaElettronicaHeader uses Python identifier FatturaElettronicaHeader
     __FatturaElettronicaHeader = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'FatturaElettronicaHeader'), 'FatturaElettronicaHeader', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_FatturaElettronicaType_FatturaElettronicaHeader', False, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 17, 6), )
 
-    
+
     FatturaElettronicaHeader = property(__FatturaElettronicaHeader.value, __FatturaElettronicaHeader.set, None, None)
 
-    
+
     # Element FatturaElettronicaBody uses Python identifier FatturaElettronicaBody
     __FatturaElettronicaBody = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(None, 'FatturaElettronicaBody'), 'FatturaElettronicaBody', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_FatturaElettronicaType_FatturaElettronicaBody', True, pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 18, 6), )
 
-    
+
     FatturaElettronicaBody = property(__FatturaElettronicaBody.value, __FatturaElettronicaBody.set, None, None)
 
-    
+
     # Element {http://www.w3.org/2000/09/xmldsig#}Signature uses Python identifier Signature
     __Signature = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(_Namespace_ds, 'Signature'), 'Signature', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_FatturaElettronicaType_httpwww_w3_org200009xmldsigSignature', False, pyxb.utils.utility.Location('http://www.w3.org/TR/2002/REC-xmldsig-core-20020212/xmldsig-core-schema.xsd', 43, 0), )
 
-    
+
     Signature = property(__Signature.value, __Signature.set, None, None)
 
-    
+
     # Attribute versione uses Python identifier versione
     __versione = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'versione'), 'versione', '__httpivaservizi_agenziaentrate_gov_itdocsxsdfatturev1_2_FatturaElettronicaType_versione', _module_typeBindings.FormatoTrasmissioneType, required=True)
     __versione._DeclarationLocation = pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 21, 4)
     __versione._UseLocation = pyxb.utils.utility.Location('https://www.agenziaentrate.gov.it/wps/file/Nsilib/Nsi/Schede/Comunicazioni/Fatture+e+corrispettivi/Fatture+e+corrispettivi+ST/ST+invio+di+fatturazione+elettronica/ST+Fatturazione+elettronica+-+Schema+VFPR12./Schema_VFPR12.xsd', 21, 4)
-    
+
     versione = property(__versione.value, __versione.set, None, None)
 
     _ElementMap.update({

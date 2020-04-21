@@ -1757,3 +1757,88 @@ msgstr "inversione contabile"
 
 #~ msgid "welfare fund type"
 #~ msgstr "Tipo cassa previdenziale"
+
+#. module: l10n_it_fatturapa
+#: selection:faturapa.summary.data,non_taxable_nature:0
+msgid "not subject ex Artt. from 7 to 7-septies of DPR 633/72"
+msgstr "non soggette ad IVA ai sensi degli artt. da 7 a 7-septies del DPR 633/72"
+
+#. module: l10n_it_fatturapa
+#: selection:faturapa.summary.data,non_taxable_nature:0
+msgid "not subject – other"
+msgstr "non soggette – altri casi"
+
+#. module: l10n_it_fatturapa
+#: selection:faturapa.summary.data,non_taxable_nature:0
+msgid "not taxable – cession to San Marino"
+msgstr "non imponibili – cessioni verso San Marino"
+
+#. module: l10n_it_fatturapa
+#: selection:faturapa.summary.data,non_taxable_nature:0
+msgid "not taxable – export"
+msgstr "non imponibili – esportazioni"
+
+#. module: l10n_it_fatturapa
+#: selection:faturapa.summary.data,non_taxable_nature:0
+msgid "not taxable – following declarations of intent"
+msgstr "non imponibili – a seguito di dichiarazioni d’intento"
+
+#. module: l10n_it_fatturapa
+#: selection:faturapa.summary.data,non_taxable_nature:0
+msgid "not taxable – intercommunity cession"
+msgstr "non imponibili – cessioni intracomunitarie"
+
+#. module: l10n_it_fatturapa
+#: selection:faturapa.summary.data,non_taxable_nature:0
+msgid "not taxable – operation similar to export cession"
+msgstr "non imponibili – operazioni assimilate alle cessioni all’esportazione"
+
+#. module: l10n_it_fatturapa
+#: selection:faturapa.summary.data,non_taxable_nature:0
+msgid "not taxable – other operations that do not contribute to the formation of the ceiling"
+msgstr "non imponibili – altre operazioni che non concorrono alla formazione del plafond"
+
+#. module: l10n_it_fatturapa
+#: selection:faturapa.summary.data,non_taxable_nature:0
+msgid "reverse charge – construction sector and related sectors"
+msgstr "inversione contabile – prestazioni comparto edile e settori connessi"
+
+#. module: l10n_it_fatturapa
+#: selection:faturapa.summary.data,non_taxable_nature:0
+msgid "reverse charge – disposal of scrap and other recycled materials"
+msgstr "inversione contabile – cessione di rottami e altri materiali di recupero"
+
+#. module: l10n_it_fatturapa
+#: selection:faturapa.summary.data,non_taxable_nature:0
+msgid "reverse charge – energy sector operations"
+msgstr "inversione contabile – operazioni settore energetico"
+
+#. module: l10n_it_fatturapa
+#: selection:faturapa.summary.data,non_taxable_nature:0
+msgid "reverse charge – other cases"
+msgstr "inversione contabile – altri casi"
+
+#. module: l10n_it_fatturapa
+#: selection:faturapa.summary.data,non_taxable_nature:0
+msgid "reverse charge – sale of buildings"
+msgstr "inversione contabile – cessione di fabbricati"
+
+#. module: l10n_it_fatturapa
+#: selection:faturapa.summary.data,non_taxable_nature:0
+msgid "reverse charge – sale of electronic products"
+msgstr "inversione contabile – cessione di prodotti elettronici"
+
+#. module: l10n_it_fatturapa
+#: selection:faturapa.summary.data,non_taxable_nature:0
+msgid "reverse charge – subcontracting in the construction sector"
+msgstr "inversione contabile – subappalto nel settore edile"
+
+#. module: l10n_it_fatturapa
+#: selection:faturapa.summary.data,non_taxable_nature:0
+msgid "reverse charge – supply of gold and pure silver"
+msgstr "inversione contabile – cessione di oro e argento puro"
+
+#. module: l10n_it_fatturapa
+#: selection:faturapa.summary.data,non_taxable_nature:0
+msgid "reverse charge – transfer of cell phones"
+msgstr "inversione contabile – cessione di telefoni cellulari"
