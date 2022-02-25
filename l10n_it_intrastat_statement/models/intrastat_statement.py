@@ -382,7 +382,6 @@ class AccountIntrastatStatement(models.Model):
         store=True,
         readonly=True,
         compute='_compute_amount_purchase_s4')
-    exclude_optional_column_sect_1_3 = fields.Boolean()
 
     @api.model
     def create(self, vals):
@@ -764,7 +763,13 @@ class AccountIntrastatStatement(models.Model):
         domain.append(('type', 'in', inv_type))
 
         statement_data = dict()
+        # all invoices
         invoices = self.env['account.invoice'].search(domain)
+        # european only
+        europe = self.env.ref('base.europe')
+        invoices = invoices.filtered(
+            lambda x: x.partner_id.country_id in europe.country_ids)
+
         for inv_intra_line in invoices.mapped('intrastat_line_ids'):
             for section_type in ['purchase', 'sale']:
                 for section_number in range(1, 5):

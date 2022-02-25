@@ -150,6 +150,9 @@ class IntrastatStatementPurchaseSection1(models.Model):
         transport_code_id = \
             inv_intra_line.transport_code_id \
             or company_id.intrastat_purchase_transport_code_id
+        transaction_nature_b_id = \
+            inv_intra_line.transaction_nature_b_id \
+            or company_id.intrastat_purchase_transaction_nature_b_id
 
         # Amounts
         dp_model = self.env['decimal.precision']
@@ -170,7 +173,8 @@ class IntrastatStatementPurchaseSection1(models.Model):
             'transport_code_id': transport_code_id.id,
             'country_origin_id': inv_intra_line.country_origin_id.id,
             'country_good_origin_id': inv_intra_line.country_good_origin_id.id,
-            'province_destination_id': province_destination_id.id
+            'province_destination_id': province_destination_id.id,
+            'transaction_nature_b_id': transaction_nature_b_id.id
         })
         return res
 
@@ -217,7 +221,7 @@ class IntrastatStatementPurchaseSection1(models.Model):
             rcd += format_x(self.country_good_origin_id.code, 2)
             # Codice della provincia di destinazione della merce
             rcd += format_x(self.province_destination_id.code, 2)
-            # Codice della natura B della transazione
+            # Codice della natura della transazione B
             rcd += format_x(self.transaction_nature_b_id.code, 1)
 
         rcd += "\r\n"
@@ -528,6 +532,15 @@ class IntrastatStatementPurchaseSection4(models.Model):
         if not self.progressive_to_modify:
             raise ValidationError(
                 _("Missing progressive to adjust on 'Purchases - Section 4'"))
+        if (not self.invoice_number) or (not self.invoice_date):
+            raise ValidationError(
+                _("Missing invoice data on 'Purchases - Section 4'"))
+        if not self.supply_method:
+            raise ValidationError(
+                _("Missing supply method on 'Purchases - Section 4'"))
+        if not self.payment_method:
+            raise ValidationError(
+                _("Missing payment method on 'Purchases - Section 4'"))
         if not self.country_payment_id:
             raise ValidationError(
                 _("Missing payment country on 'Purchases - Section 4'"))

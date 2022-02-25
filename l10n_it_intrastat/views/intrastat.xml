@@ -146,6 +146,8 @@
                 <tree string="Transaction Nature">
                     <field name="code"/>
                     <field name="name"/>
+                    <field name="triangulation"/>
+                    <field name="active"/>
                 </tree>
             </field>
         </record>
@@ -158,6 +160,8 @@
                     <group>
                         <field name="code"/>
                         <field name="name"/>
+                        <field name="triangulation"/>
+                        <field name="active"/>
                     </group>
                 </form>
             </field>
@@ -173,6 +177,9 @@
             action="action_account_intrastat_transaction_nature_transport" parent="menu_account_intrastat_configuration"
             groups="account.group_account_user" sequence="40"/>
 
+        <!--
+        TRANSACTION NATURE B
+        -->
         <record id="account_intrastat_transaction_nature_b_view_tree" model="ir.ui.view">
             <field name="name">account.intrastat.transaction.nature.b.view.tree</field>
             <field name="model">account.intrastat.transaction.nature.b</field>
@@ -180,6 +187,7 @@
                 <tree string="Transaction Nature B">
                     <field name="code"/>
                     <field name="name"/>
+                    <field name="nature_parent_id"/>
                 </tree>
             </field>
         </record>
@@ -192,6 +200,7 @@
                     <group>
                         <field name="code"/>
                         <field name="name"/>
+                        <field name="nature_parent_id"/>
                     </group>
                 </form>
             </field>
