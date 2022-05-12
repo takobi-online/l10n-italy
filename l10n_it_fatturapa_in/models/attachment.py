@@ -47,6 +47,8 @@ class FatturaPAAttachmentIn(models.Model):
     is_self_invoice = fields.Boolean(
         "Contains self invoices", compute="_compute_xml_data", store=True
     )
+    linked_invoice_id_xml = fields.Char(
+        compute="_compute_linked_invoice_id_xml", store=True)
 
     _sql_constraints = [(
         'ftpa_attachment_in_name_uniq',
@@ -82,6 +84,21 @@ class FatturaPAAttachmentIn(models.Model):
     def recompute_xml_fields(self):
         self._compute_xml_data()
         self._compute_registered()
+
+    @api.multi
+    @api.depends('ir_attachment_id.datas')
+    def _compute_linked_invoice_id_xml(self):
+        for att in self:
+            att.linked_invoice_id_xml = ""
+            wiz_obj = self.env['wizard.import.fatturapa'] \
+                .with_context(from_attachment=att)
+            fatt = wiz_obj.get_invoice_obj(att)
+            for invoice_body in fatt.FatturaElettronicaBody:
+                if len(invoice_body.DatiGenerali.DatiFattureCollegate) == 1:
+                    att.linked_invoice_id_xml = (
+                        invoice_body.DatiGenerali.DatiFattureCollegate[0].
+                        IdDocumento
+                    )
 
     @api.multi
     @api.depends('ir_attachment_id.datas')
