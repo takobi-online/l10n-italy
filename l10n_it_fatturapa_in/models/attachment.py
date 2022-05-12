@@ -47,6 +47,7 @@ class FatturaPAAttachmentIn(models.Model):
     is_self_invoice = fields.Boolean(
         "Contains self invoices", compute="_compute_xml_data", store=True
     )
+    linked_invoice_id_xml = fields.Char(compute="_compute_xml_data", store=True)
 
     _sql_constraints = [(
         'ftpa_attachment_in_name_uniq',
@@ -97,6 +98,7 @@ class FatturaPAAttachmentIn(models.Model):
                 att.invoices_number = len(fatt.FatturaElettronicaBody)
                 att.invoices_total = 0
                 att.is_self_invoice = False
+                att.linked_invoice_id_xml = ""
                 invoices_date = []
                 for invoice_body in fatt.FatturaElettronicaBody:
                     att.invoices_total += float(
@@ -112,6 +114,11 @@ class FatturaPAAttachmentIn(models.Model):
                     if invoice_body.DatiGenerali.DatiGeneraliDocumento.TipoDocumento \
                             in SELF_INVOICE_TYPES:
                         att.is_self_invoice = True
+                    if len(invoice_body.DatiGenerali.DatiFattureCollegate) == 1:
+                        att.linked_invoice_id_xml = (
+                            invoice_body.DatiGenerali.DatiFattureCollegate[0].
+                            IdDocumento
+                        )
                 att.invoices_date = ' '.join(invoices_date)
             else:
                 att.xml_supplier_id = False
