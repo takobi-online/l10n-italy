@@ -91,7 +91,13 @@ class FatturaPAAttachmentIn(models.Model):
 
     @api.multi
     def recompute_xml_fields(self):
-        self._compute_xml_data()
+        # Pretend the attachment has been modified
+        # and trigger a recomputation:
+        # this recomputes all fields whose value
+        # is extracted from the attachment
+        self.modified(['ir_attachment_id'])
+        self.recompute()
+
         self._compute_registered()
 
     @api.multi
@@ -122,8 +128,9 @@ class FatturaPAAttachmentIn(models.Model):
             att.is_self_invoice = False
             if fatt:
                 for invoice_body in fatt.FatturaElettronicaBody:
-                    if invoice_body.DatiGenerali.DatiGeneraliDocumento.TipoDocumento \
-                            in SELF_INVOICE_TYPES:
+                    document_type = invoice_body.DatiGenerali \
+                        .DatiGeneraliDocumento.TipoDocumento
+                    if document_type in SELF_INVOICE_TYPES:
                         # If at least one invoice is a self invoice,
                         # then the whole attachment is flagged
                         att.is_self_invoice = True
@@ -164,7 +171,6 @@ class FatturaPAAttachmentIn(models.Model):
 
             att.update(dict(
                 invoices_date=' '.join(invoices_date),
-                is_self_invoice=is_self_invoice,
             ))
 
             # We don't need to look into each invoice
