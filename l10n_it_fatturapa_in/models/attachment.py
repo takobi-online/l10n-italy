@@ -52,7 +52,7 @@ class FatturaPAAttachmentIn(models.Model):
         compute='_compute_e_invoice_validation_error')
 
     e_invoice_parsing_error = fields.Text(
-        compute="_compute_xml_data",
+        compute="_compute_e_invoice_parsing_error",
         store=True,
     )
     is_self_invoice = fields.Boolean(
@@ -135,6 +135,12 @@ class FatturaPAAttachmentIn(models.Model):
                         # then the whole attachment is flagged
                         att.is_self_invoice = True
                         break
+
+    @api.multi
+    @api.depends('ir_attachment_id.datas')
+    def _compute_e_invoice_parsing_error(self):
+        for att in self:
+            att.get_invoice_obj()
 
     @api.multi
     @api.depends('ir_attachment_id.datas')
