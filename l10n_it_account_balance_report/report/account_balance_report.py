@@ -120,7 +120,16 @@ class ReportAccountBalanceReport(models.TransientModel):
         r_sec, r_name = cols['right']['section'], cols['right']['name']
         valid_sections = [l_sec, r_sec]
 
+        account_type = self.env.ref('account.data_unaffected_earnings')
+        unaffected_earnings_accounts = self.env['account.account'].search(
+            [
+                ('user_type_id', '=', account_type.id),
+                ('company_id', '=', self.company_id.id),
+            ])
         for trial_acc_line in self.trial_balance_id.account_ids:
+            if trial_acc_line.account_id in unaffected_earnings_accounts:
+                continue
+
             section = self.get_report_section(
                 trial_acc_line.account_id, trial_acc_line.account_group_id
             )
@@ -128,9 +137,9 @@ class ReportAccountBalanceReport(models.TransientModel):
                 continue
 
             sign = trial_acc_line.get_balance_sign()
-            trial_acc_line.period_balance *= sign
+            trial_acc_line.final_balance *= sign
             for trial_partner_line in trial_acc_line.partner_ids:
-                trial_partner_line.period_balance *= sign
+                trial_partner_line.final_balance *= sign
 
             balance_line_vals = (
                 0, 0, {
@@ -150,11 +159,11 @@ class ReportAccountBalanceReport(models.TransientModel):
             if section == r_sec:
                 section_credit_vals.append(balance_line_vals)
                 if not trial_acc_line.account_group_id:
-                    total_credit += trial_acc_line.period_balance
+                    total_credit += trial_acc_line.final_balance
             elif section == l_sec:
                 section_debit_vals.append(balance_line_vals)
                 if not trial_acc_line.account_group_id:
-                    total_debit += trial_acc_line.period_balance
+                    total_debit += trial_acc_line.final_balance
 
         curr = self.company_id.currency_id or self.company_id._get_euro()
         digits = curr.decimal_places
@@ -285,14 +294,14 @@ class ReportAccountBalanceReportPartner(models.TransientModel):
     )
 
     @api.multi
-    @api.depends('period_balance',
+    @api.depends('final_balance',
                  'report_id.hide_account_at_0',
-                 'trial_balance_partner_id.period_balance')
+                 'trial_balance_partner_id.final_balance')
     def _compute_hide_line(self):
         report = self.mapped('report_section_id.report_credit_id') \
             + self.mapped('report_section_id.report_debit_id')
         if report.hide_account_at_0:
             for partner_line in self:
-                p_bal = partner_line.period_balance
+                p_bal = partner_line.final_balance
                 digits = partner_line.currency_id.decimal_places
                 partner_line.hide_line = float_is_zero(p_bal, digits)
