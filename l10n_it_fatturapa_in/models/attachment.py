@@ -1,7 +1,10 @@
 
 import base64
+import logging
 from odoo import fields, models, api, _
 from odoo.tools import format_date
+
+_logger = logging.getLogger(__name__)
 
 SELF_INVOICE_TYPES = ("TD16", "TD17", "TD18", "TD19", "TD20", "TD21")
 
@@ -75,9 +78,14 @@ class FatturaPAAttachmentIn(models.Model):
     @api.depends('ir_attachment_id.datas')
     def _compute_xml_data(self):
         for att in self:
-            if not att.registered:
-                wiz_obj = self.env['wizard.import.fatturapa'] \
-                    .with_context(from_attachment=att)
+            att.xml_supplier_id = False
+            att.invoices_number = 0
+            att.invoices_total = 0
+            att.invoices_date = False
+            att.is_self_invoice = False
+            wiz_obj = self.env['wizard.import.fatturapa'] \
+                .with_context(from_attachment=att)
+            try:
                 fatt = wiz_obj.get_invoice_obj(att)
                 cedentePrestatore = fatt.FatturaElettronicaHeader.CedentePrestatore
                 partner_id = wiz_obj.getCedPrest(cedentePrestatore)
@@ -101,12 +109,11 @@ class FatturaPAAttachmentIn(models.Model):
                             in SELF_INVOICE_TYPES:
                         att.is_self_invoice = True
                 att.invoices_date = ' '.join(invoices_date)
-            else:
-                att.xml_supplier_id = False
-                att.invoices_number = 0
-                att.invoices_total = 0
-                att.is_self_invoice = False
-                att.invoices_date = False
+            except Exception as e:
+                _logger.error(
+                    _("Impossible to execute _compute_xml_data for %s: %s")
+                    % (att.display_name, e)
+                )
 
     @api.multi
     @api.depends('in_invoice_ids')
