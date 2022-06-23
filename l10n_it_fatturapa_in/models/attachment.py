@@ -132,12 +132,13 @@ class FatturaPAAttachmentIn(models.Model):
         for att in self:
             att.linked_invoice_id_xml = ""
             fatt = att.get_invoice_obj()
-            for invoice_body in fatt.FatturaElettronicaBody:
-                if len(invoice_body.DatiGenerali.DatiFattureCollegate) == 1:
-                    att.linked_invoice_id_xml = (
-                        invoice_body.DatiGenerali.DatiFattureCollegate[0].
-                        IdDocumento
-                    )
+            if fatt:
+                for invoice_body in fatt.FatturaElettronicaBody:
+                    if len(invoice_body.DatiGenerali.DatiFattureCollegate) == 1:
+                        att.linked_invoice_id_xml = (
+                            invoice_body.DatiGenerali.DatiFattureCollegate[0].
+                            IdDocumento
+                        )
 
     @api.multi
     @api.depends('ir_attachment_id.datas')
