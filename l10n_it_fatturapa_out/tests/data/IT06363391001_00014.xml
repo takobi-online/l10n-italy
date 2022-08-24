@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ns1:FatturaElettronica xmlns:ns1="http://ivaservizi.agenziaentrate.gov.it/docs/xsd/fatture/v1.2" versione="FPR12">
+<ns1:FatturaElettronica versione="FPR12" xmlns:ns1="http://ivaservizi.agenziaentrate.gov.it/docs/xsd/fatture/v1.2">
     <FatturaElettronicaHeader>
         <DatiTrasmissione>
             <IdTrasmittente>
                 <IdPaese>IT</IdPaese>
                 <IdCodice>06363391001</IdCodice>
             </IdTrasmittente>
-            <ProgressivoInvio>00009</ProgressivoInvio>
+            <ProgressivoInvio>00014</ProgressivoInvio>
             <FormatoTrasmissione>FPR12</FormatoTrasmissione>
-            <CodiceDestinatario>XXXXXXX</CodiceDestinatario>
+            <CodiceDestinatario>0000000</CodiceDestinatario>
             <ContattiTrasmittente>
                 <Telefono>06543534343</Telefono>
                 <Email>info@yourcompany.example.com</Email>
             </ContattiTrasmittente>
+            <PECDestinatario>test@pec.it</PECDestinatario>
         </DatiTrasmissione>
         <CedentePrestatore>
             <DatiAnagrafici>
@@ -40,19 +41,20 @@
         <CessionarioCommittente>
             <DatiAnagrafici>
                 <IdFiscaleIVA>
-                    <IdPaese>AE</IdPaese>
-                    <IdCodice>99999999999</IdCodice>
+                    <IdPaese>IT</IdPaese>
+                    <IdCodice>07973780013</IdCodice>
                 </IdFiscaleIVA>
+                <CodiceFiscale>07973780013</CodiceFiscale>
                 <Anagrafica>
-                    <Denominazione>Foreign Customer</Denominazione>
+                    <Denominazione>B2B Customer</Denominazione>
                 </Anagrafica>
             </DatiAnagrafici>
             <Sede>
-                <Indirizzo>29-17 Al Thanya St</Indirizzo>
-                <CAP>00000</CAP>
-                <Comune>Dubai</Comune>
-                <Provincia>EE</Provincia>
-                <Nazione>AE</Nazione>
+                <Indirizzo>Via Roma, 1</Indirizzo>
+                <CAP>16100</CAP>
+                <Comune>Genova</Comune>
+                <Provincia>AK</Provincia>
+                <Nazione>IT</Nazione>
             </Sede>
         </CessionarioCommittente>
     </FatturaElettronicaHeader>
@@ -60,10 +62,10 @@
         <DatiGenerali>
             <DatiGeneraliDocumento>
                 <TipoDocumento>TD01</TipoDocumento>
-                <Divisa>AED</Divisa>
-                <Data>2018-01-07</Data>
-                <Numero>INV/2018/0018</Numero>
-                <ImportoTotaleDocumento>14.00</ImportoTotaleDocumento>
+                <Divisa>EUR</Divisa>
+                <Data>2021-01-07</Data>
+                <Numero>INV/2021/0014</Numero>
+                <ImportoTotaleDocumento>22.00</ImportoTotaleDocumento>
                 <Art73>SI</Art73>
             </DatiGeneraliDocumento>
         </DatiGenerali>
@@ -71,33 +73,33 @@
             <DettaglioLinee>
                 <NumeroLinea>1</NumeroLinea>
                 <Descrizione>Mouse Optical</Descrizione>
-                <Quantita>1.000</Quantita>
+                <Quantita>3.000</Quantita>
                 <UnitaMisura>Unit(s)</UnitaMisura>
-                <PrezzoUnitario>8.19672</PrezzoUnitario>
-                <PrezzoTotale>8.20</PrezzoTotale>
-                <AliquotaIVA>22.00</AliquotaIVA>
+                <PrezzoUnitario>10.00000</PrezzoUnitario>
+                <PrezzoTotale>30.00</PrezzoTotale>
+                <AliquotaIVA>10.00</AliquotaIVA>
             </DettaglioLinee>
             <DettaglioLinee>
                 <NumeroLinea>2</NumeroLinea>
-                <Descrizione>Zed+ Antivirus</Descrizione>
+                <Descrizione>Mouse Optical</Descrizione>
                 <Quantita>1.000</Quantita>
                 <UnitaMisura>Unit(s)</UnitaMisura>
-                <PrezzoUnitario>3.27869</PrezzoUnitario>
-                <PrezzoTotale>3.28</PrezzoTotale>
-                <AliquotaIVA>22.00</AliquotaIVA>
+                <PrezzoUnitario>-10.00000</PrezzoUnitario>
+                <PrezzoTotale>-10.00</PrezzoTotale>
+                <AliquotaIVA>10.00</AliquotaIVA>
             </DettaglioLinee>
             <DatiRiepilogo>
-                <AliquotaIVA>22.00</AliquotaIVA>
-                <ImponibileImporto>11.48</ImponibileImporto>
-                <Imposta>2.52</Imposta>
+                <AliquotaIVA>10.00</AliquotaIVA>
+                <ImponibileImporto>20.00</ImponibileImporto>
+                <Imposta>2.00</Imposta>
             </DatiRiepilogo>
         </DatiBeniServizi>
         <DatiPagamento>
             <CondizioniPagamento>TP02</CondizioniPagamento>
             <DettaglioPagamento>
                 <ModalitaPagamento>MP05</ModalitaPagamento>
-                <DataScadenzaPagamento>2018-02-28</DataScadenzaPagamento>
-                <ImportoPagamento>14.00</ImportoPagamento>
+                <DataScadenzaPagamento>2021-02-28</DataScadenzaPagamento>
+                <ImportoPagamento>22.00</ImportoPagamento>
             </DettaglioPagamento>
         </DatiPagamento>
     </FatturaElettronicaBody>
