@@ -759,6 +759,10 @@ class AccountVatPeriodEndStatement(models.Model):
                 ("type_tax_use", "in", ["sale", "purchase"]),
             ]
         )
+        if statement.account_ids:
+            taxes = taxes.filtered(
+                lambda tax: tax.vat_statement_account_id in statement.account_ids
+            )
         for tax in taxes:
             if (
                 tax.vat_statement_account_id.id in statement.account_ids.ids
