@@ -16,10 +16,12 @@ class TestBalanceEU(TransactionCase):
         # add env on cls and many other things
         super(TestBalanceEU, self).setUp()
 
-    def _add_move(self, ref, journal, date, debit_list, credit_list):
+    def _add_move(self, company_id, ref, journal, date, debit_list, credit_list):
         lines = []
         for i in debit_list:
-            acc_id = self.env["account.account"].search([("code", "=", i[0])])
+            acc_id = self.env["account.account"].search(
+                [("company_id", "=", company_id), ("code", "=", i[0])]
+            )
             if not acc_id:
                 self.assertTrue(acc_id)
             else:
@@ -30,12 +32,14 @@ class TestBalanceEU(TransactionCase):
                         {
                             "debit": i[1],
                             "credit": 0,
-                            "account_id": acc_id.id,
+                            "account_id": acc_id[0].id,
                         },
                     )
                 )
         for i in credit_list:
-            acc_id = self.env["account.account"].search([("code", "=", i[0])])
+            acc_id = self.env["account.account"].search(
+                [("company_id", "=", company_id), ("code", "=", i[0])]
+            )
             if not acc_id:
                 self.assertTrue(acc_id)
             else:
@@ -46,7 +50,7 @@ class TestBalanceEU(TransactionCase):
                         {
                             "debit": 0,
                             "credit": i[1],
-                            "account_id": acc_id.id,
+                            "account_id": acc_id[0].id,
                         },
                     )
                 )
@@ -76,10 +80,12 @@ class TestBalanceEU(TransactionCase):
         ]._get_report_values(wiz_balance_eu, data=form_data)
 
     def test_balance_eu_1(self):
+        company_id = self.env.company.id
         journal = self.env["account.journal"].search(
-            [("company_id", "=", self.env.user.company_id.id)], limit=1
+            [("company_id", "=", company_id)], limit=1
         )
         self._add_move(
+            company_id,
             "vendita a cliente",
             journal,
             datetime(2023, 3, 1).date(),
@@ -87,6 +93,7 @@ class TestBalanceEU(TransactionCase):
             (("260100", 6.77), ("310100", 30.75)),  # credit
         )
         self._add_move(
+            company_id,
             "incasso da cliente",
             journal,
             datetime(2023, 4, 5).date(),
@@ -94,6 +101,7 @@ class TestBalanceEU(TransactionCase):
             (("150100", 37.52),),  # credit
         )
         self._add_move(
+            company_id,
             "giroconto per generare un delta nel PATRIMONIALE "
             + "su bilancio UE arrotondato alla unità",
             journal,
@@ -107,6 +115,7 @@ class TestBalanceEU(TransactionCase):
             (("210100", 1000),),  # credit
         )
         self._add_move(
+            company_id,
             "giroconto per generare un delta nel CONTO ECONOMICO "
             + "su bilancio UE arrotondato alla unità",
             journal,

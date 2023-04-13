@@ -3,8 +3,8 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 {
-    "name": "ITA - Bilancio riclassificato EU",
-    "version": "14.0.1.0.0",
+    "name": "ITA - Bilancio UE con XBRL",
+    "version": "14.0.1.0.4",
     "category": "Localization/Italy",
     "development_status": "Alpha",
     "license": "AGPL-3",
@@ -13,18 +13,24 @@
     "mantainers": ["mktsrl"],
     "depends": [
         "account",
+        "date_range",
+        "l10n_it",
         "l10n_it_rea",
         "l10n_it_fiscalcode",
         "report_xlsx",
+        "report_xml",
     ],
     "data": [
-        "security/account_balance_eu.xml",
-        "views/account_balance_eu_view.xml",
         "data/account.balance.eu.csv",
         "data/account_balance_eu_reclassification.xml",
-        "wizards/account_balance_eu_wizard.xml",
+        "report/templates/layouts.xml",
         "report/account_balance_eu_report.xml",
+        "security/account_balance_eu.xml",
+        "views/account_balance_eu_view.xml",
+        "views/report_template.xml",
+        "wizards/account_balance_eu_wizard.xml",
     ],
+    "qweb": ["static/src/xml/report.xml"],
     "application": False,
     "installable": True,
 }

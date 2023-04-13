@@ -34,15 +34,14 @@ of the EU balance
 with all the entries of the most recent taxonomies by making available the
 following features:
 
-* associate the items in the Chart of Accounts with the items in the EU Budget (with
-   automatic pre-association during module installation)
+* associate the items in the Chart of Accounts with the items in the EU Budget (with automatic pre-association during module installation)
 * process/export the accounting records of a given period (for example
-   last year)
+  last year)
 * to get the balance in EU format, making the appropriate checks
-   (association of all accounts moved in the period and balancing
-   of the balance sheet)
+  (association of all accounts moved in the period and balancing
+  of the balance sheet)
 * generate a preview REPORT of the EU Balance
 * PDF printout of the EU Balance
 * download files in XLSX or XBRL format, useful for importing into third-party software
-   accounting,
-   data transfer to accountants and presentation to the Chamber of Commerce
+  accounting,
+  data transfer to accountants and presentation to the Chamber of Commerce
