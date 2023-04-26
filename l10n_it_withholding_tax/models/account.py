@@ -1,5 +1,6 @@
 # Copyright 2015 Alessandro Camilli (<http://www.openforce.it>)
 # Copyright 2018 Lorenzo Battistini - Agile Business Group
+# Copyright 2023 Simone Rubino - TAKOBI
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 from odoo import _, api, fields, models
@@ -551,6 +552,35 @@ class AccountMove(models.Model):
         if self.company_id.account_fiscal_country_id.code == "IT":
             return "l10n_it_withholding_tax.print_withholding_tax"
         return super()._get_name_invoice_report()
+
+    def _wt_unlink_statements_move_states(self):
+        """Move states that trigger the deletion of linked statements.
+
+        When a posted move is changed in one of these states,
+        its statements are deleted.
+        """
+        return "cancel", "draft"
+
+    def _wt_unlink_statements(self):
+        """Delete the statements linked to posted moves in `self`."""
+        posted_moves = self.filtered_domain(
+            [
+                ("state", "=", "posted"),
+            ],
+        )
+        if posted_moves:
+            statements = self.env["withholding.tax.statement"].search(
+                [
+                    ("move_id", "in", posted_moves.ids),
+                ],
+            )
+            statements.unlink()
+
+    def write(self, vals):
+        new_state = vals.get("state")
+        if new_state in self._wt_unlink_statements_move_states():
+            self._wt_unlink_statements()
+        return super().write(vals)
 
 
 class AccountMoveLine(models.Model):
