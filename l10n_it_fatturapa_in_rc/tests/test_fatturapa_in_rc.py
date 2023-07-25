@@ -2,8 +2,8 @@ from odoo.addons.l10n_it_fatturapa_in.tests.fatturapa_common import FatturapaCom
 
 
 class TestInvoiceRC(FatturapaCommon):
-    def setUpClass(self):
-        super().setUpClass()
+    def setUp(self):
+        super(TestInvoiceRC, self).setUp()
         self.invoice_model = self.env["account.move"]
         self.invoice_line_model = self.env["account.move.line"]
         self.partner_model = self.env["res.partner"]
