@@ -4,6 +4,32 @@ from odoo.tools import format_date
 SELF_INVOICE_TYPES = ("TD16", "TD17", "TD18", "TD19", "TD20", "TD21", "TD27", "TD28")
 
 
+class Attachment(models.Model):
+    _inherit = "ir.attachment"
+
+    @api.model
+    def check(self, mode, values=None):
+        for attachment in self:
+            ftpa_attachment = (
+                self.env["fatturapa.attachment.in"]
+                .sudo()
+                .search([("ir_attachment_id", "=", attachment.id)])
+            )
+            if ftpa_attachment:
+                # checking access to fatturapa.attachment, similar to super
+                # when attachment is linked to a record
+                access_mode = "write" if mode in ("create", "unlink") else mode
+                ftpa_attachment.with_user(self.env.user.id).check_access_rights(
+                    access_mode
+                )
+                ftpa_attachment.with_user(self.env.user.id).check_access_rule(
+                    access_mode
+                )
+            else:
+                super(Attachment, attachment).check(mode, values)
+        return None
+
+
 class FatturaPAAttachmentIn(models.Model):
     _name = "fatturapa.attachment.in"
     _description = "E-bill import file"
