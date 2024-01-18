@@ -1897,83 +1897,86 @@ class WizardImportFatturapa(models.TransientModel):
             original_discount_precision,
         ) = self._set_decimal_precision("Discount", "discount_decimal_digits")
 
-        new_invoices = []
-        # convert to dict in order to be able to modify context
-        fatturapa_attachments = self._get_selected_records()
-        self.env.context = dict(self.env.context)
-        for fatturapa_attachment in fatturapa_attachments:
-            self.reset_inconsistencies()
-            self._check_attachment(fatturapa_attachment)
-
-            fatt = fatturapa_attachment.get_invoice_obj()
-            if not fatt:
-                raise UserError(
-                    _(
-                        "Cannot import an attachment that could not be parsed.\n"
-                        "Please fix the parsing error first, then try again."
-                    )
-                )
-
-            cedentePrestatore = fatt.FatturaElettronicaHeader.CedentePrestatore
-            # 1.2
-            partner_id = self._get_invoice_partner_id(fatt)
-            # 1.3
-            TaxRappresentative = fatt.FatturaElettronicaHeader.RappresentanteFiscale
-            # 1.5
-            Intermediary = (
-                fatt.FatturaElettronicaHeader.TerzoIntermediarioOSoggettoEmittente
-            )
-
-            generic_inconsistencies = ""
-            existing_inconsistencies = self.get_inconsistencies()
-            if existing_inconsistencies:
-                generic_inconsistencies = existing_inconsistencies + "\n\n"
-
-            xmlproblems = getattr(fatt, "_xmldoctor", None)
-            if xmlproblems:  # None or []
-                generic_inconsistencies += "\n".join(xmlproblems) + "\n\n"
-
-            # 2
-            for fattura in fatt.FatturaElettronicaBody:
-
-                # reset inconsistencies
+        try:
+            new_invoices = []
+            # convert to dict in order to be able to modify context
+            fatturapa_attachments = self._get_selected_records()
+            self.env.context = dict(self.env.context)
+            for fatturapa_attachment in fatturapa_attachments:
                 self.reset_inconsistencies()
+                self._check_attachment(fatturapa_attachment)
 
-                invoice = self.invoiceCreate(
-                    fatt, fatturapa_attachment, fattura, partner_id
+                fatt = fatturapa_attachment.get_invoice_obj()
+                if not fatt:
+                    raise UserError(
+                        _(
+                            "Cannot import an attachment that could not be parsed.\n"
+                            "Please fix the parsing error first, then try again."
+                        )
+                    )
+
+                cedentePrestatore = fatt.FatturaElettronicaHeader.CedentePrestatore
+                # 1.2
+                partner_id = self._get_invoice_partner_id(fatt)
+                # 1.3
+                TaxRappresentative = fatt.FatturaElettronicaHeader.RappresentanteFiscale
+                # 1.5
+                Intermediary = (
+                    fatt.FatturaElettronicaHeader.TerzoIntermediarioOSoggettoEmittente
                 )
 
-                self.set_StabileOrganizzazione(cedentePrestatore, invoice)
-                if TaxRappresentative:
-                    tax_partner_id = self.getPartnerBase(
-                        TaxRappresentative.DatiAnagrafici
-                    )
-                    invoice.write({"tax_representative_id": tax_partner_id})
-                if Intermediary:
-                    Intermediary_id = self.getPartnerBase(Intermediary.DatiAnagrafici)
-                    invoice.write({"intermediary": Intermediary_id})
-                new_invoices.append(invoice.id)
-                self.check_invoice_amount(invoice, fattura)
-
-                invoice.set_einvoice_data(fattura)
-
+                generic_inconsistencies = ""
                 existing_inconsistencies = self.get_inconsistencies()
                 if existing_inconsistencies:
-                    invoice_inconsistencies = existing_inconsistencies
-                else:
-                    invoice_inconsistencies = ""
-                invoice.inconsistencies = (
-                    generic_inconsistencies + invoice_inconsistencies
-                )
+                    generic_inconsistencies = existing_inconsistencies + "\n\n"
 
-        if price_precision and different_price_precisions:
-            self._restore_original_precision(price_precision, original_price_precision)
-        if qty_precision and different_qty_precisions:
-            self._restore_original_precision(qty_precision, original_qty_precision)
-        if discount_precision and different_discount_precisions:
-            self._restore_original_precision(
-                discount_precision, original_discount_precision
-            )
+                xmlproblems = getattr(fatt, "_xmldoctor", None)
+                if xmlproblems:  # None or []
+                    generic_inconsistencies += "\n".join(xmlproblems) + "\n\n"
+
+                # 2
+                for fattura in fatt.FatturaElettronicaBody:
+
+                    # reset inconsistencies
+                    self.reset_inconsistencies()
+
+                    invoice = self.invoiceCreate(
+                        fatt, fatturapa_attachment, fattura, partner_id
+                    )
+
+                    self.set_StabileOrganizzazione(cedentePrestatore, invoice)
+                    if TaxRappresentative:
+                        tax_partner_id = self.getPartnerBase(
+                            TaxRappresentative.DatiAnagrafici
+                        )
+                        invoice.write({"tax_representative_id": tax_partner_id})
+                    if Intermediary:
+                        Intermediary_id = self.getPartnerBase(Intermediary.DatiAnagrafici)
+                        invoice.write({"intermediary": Intermediary_id})
+                    new_invoices.append(invoice.id)
+                    self.check_invoice_amount(invoice, fattura)
+
+                    invoice.set_einvoice_data(fattura)
+
+                    existing_inconsistencies = self.get_inconsistencies()
+                    if existing_inconsistencies:
+                        invoice_inconsistencies = existing_inconsistencies
+                    else:
+                        invoice_inconsistencies = ""
+                    invoice.inconsistencies = (
+                        generic_inconsistencies + invoice_inconsistencies
+                    )
+        except Exception:
+            raise
+        finally:
+            if price_precision and different_price_precisions:
+                self._restore_original_precision(price_precision, original_price_precision)
+            if qty_precision and different_qty_precisions:
+                self._restore_original_precision(qty_precision, original_qty_precision)
+            if discount_precision and different_discount_precisions:
+                self._restore_original_precision(
+                    discount_precision, original_discount_precision
+                )
 
         return {
             "view_type": "form",
