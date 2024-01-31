@@ -33,6 +33,13 @@ def format_numbers(number):
     return float_repr(number, max(2, len(cents)))
 
 
+def fpaToEur(amount, invoice, euro):
+    currency = invoice.currency_id
+    if currency == euro:
+        return amount
+    return currency._convert(amount, euro, invoice.company_id, invoice.date, False)
+
+
 class EFatturaOut:
     def get_template_values(self):  # noqa: C901
         """Prepare values and helper functions for the template"""
@@ -207,13 +214,8 @@ class EFatturaOut:
             return wiz.getPayments(invoice)
 
         def fpa_to_eur(amount, invoice):
-            currency = invoice.currency_id
             euro = self.env.ref("base.EUR")
-            if currency == euro:
-                return amount
-            return currency._convert(
-                amount, euro, invoice.company_id, invoice.date, False
-            )
+            return fpaToEur(amount, invoice, euro)
 
         if self.partner_id.commercial_partner_id.is_pa:
             # check value code
