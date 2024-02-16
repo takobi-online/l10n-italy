@@ -173,10 +173,18 @@
                                                             /></td>
                                                 </t>
                                                 <!-- Ragione sociale -->
-                                                <td class="left_without_line_bold"><div
+                                                <td class="left_without_line_bold">
+                                                    <div
+                                                            t-if="not show_full_contact_addess"
                                                             style="page-break-inside: avoid"
                                                             t-esc="move.partner_id.name"
-                                                        /></td>
+                                                        />
+                                                    <div
+                                                            t-if="show_full_contact_addess"
+                                                            style="page-break-inside: avoid"
+                                                            t-esc="move.partner_id.contact_address"
+                                                        />
+                                                </td>
                                                 <!-- PIVA -->
                                                 <td class="left_without_line_bold"><div
                                                             style="page-break-inside: avoid"
