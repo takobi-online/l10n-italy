@@ -240,14 +240,9 @@ class AccountMoveLine(models.Model):
     def _prepare_intrastat_line_amount(self, res):
         self.ensure_one()
         amount_currency = self.price_subtotal
-        company_currency = self.move_id.company_id.currency_id
-        invoice_currency = self.move_id.currency_id
-        amount_euro = invoice_currency._convert(
-            amount_currency,
-            company_currency,
-            self.move_id.company_id,
-            fields.Date.today(),
-        )
+        amount_euro = abs(self.balance)
+        if amount_currency < 0:
+            amount_euro = -amount_euro
         statistic_amount_euro = amount_euro
         res.update(
             {
@@ -452,7 +447,7 @@ class AccountInvoiceIntrastat(models.Model):
                     line.amount_currency,
                     company_currency,
                     line.invoice_id.company_id,
-                    fields.Date.today(),
+                    line.invoice_id.invoice_date,
                 )
 
     @api.depends("invoice_id.partner_id")
