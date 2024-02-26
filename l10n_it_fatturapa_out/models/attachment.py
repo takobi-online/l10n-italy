@@ -5,6 +5,32 @@ from odoo import _, api, fields, models
 from odoo.exceptions import UserError
 
 
+class Attachment(models.Model):
+    _inherit = "ir.attachment"
+
+    @api.model
+    def check(self, mode, values=None):
+        for attachment in self:
+            ftpa_attachment = (
+                self.env["fatturapa.attachment.out"]
+                .sudo()
+                .search([("ir_attachment_id", "=", attachment.id)])
+            )
+            if ftpa_attachment:
+                # checking access to fatturapa.attachment, similar to super
+                # when attachment is linked to a record
+                access_mode = "write" if mode in ("create", "unlink") else mode
+                ftpa_attachment.with_user(self.env.user.id).check_access_rights(
+                    access_mode
+                )
+                ftpa_attachment.with_user(self.env.user.id).check_access_rule(
+                    access_mode
+                )
+            else:
+                super(Attachment, attachment).check(mode, values)
+        return None
+
+
 class FatturaPAAttachment(models.Model):
     _inherit = "fatturapa.attachment"
     _name = "fatturapa.attachment.out"
