@@ -64,6 +64,14 @@ class FatturaPAAttachment(models.Model):
                 att.get_base_url() + "/fatturapa/preview/%s" % att.ir_attachment_id.id
             )
 
+    @api.model
+    def _check_access_ftpa(self, mode, ftpa_attachment):
+        # checking access to fatturapa.attachment, similar to ir.attachment.check
+        # when attachment is linked to a record
+        access_mode = "write" if mode in ("create", "unlink") else mode
+        ftpa_attachment.with_user(self.env.user.id).check_access_rights(access_mode)
+        ftpa_attachment.with_user(self.env.user.id).check_access_rule(access_mode)
+
     @staticmethod
     def ftpa_preview(self):
         return {
