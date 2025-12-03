@@ -21,6 +21,7 @@
                     <field
                         name="rc_journal_ids"
                         invisible="not include_rc_moves"
+                        readonly="not include_rc_moves"
                         widget="many2many_tags"
                     />
                 </group>
