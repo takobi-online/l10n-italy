@@ -23,6 +23,10 @@ odoo.define("fiscal_epos_print.epson_epos_print", function (require) {
     // so it never gives up before the printer answers.
     var EFTPOS_XHR_MARGIN_MS = 20000;
 
+    // XHR timeout for a single "knock" (read-only queryPrinterStatus) used to
+    // check the printer is free before sending an authorizeSales.
+    var EFTPOS_KNOCK_TIMEOUT_MS = 8000;
+
     function addPadding(str, padding=4) {
         var pad = new Array(padding).fill(0).join('') + str;
         return pad.substr(pad.length - padding, padding);
@@ -521,6 +525,31 @@ odoo.define("fiscal_epos_print.epson_epos_print", function (require) {
             };
             console.log(xml);
             this.fiscalPrinter.send(url, xml, timeoutMs + EFTPOS_XHR_MARGIN_MS);
+        },
+
+        /*
+          "Knock": a read-only queryPrinterStatus used to check whether the
+          printer is reachable/free before sending an authorizeSales. A status
+          query cannot start a payment, so it is safe to send/repeat. While the
+          printer is still closing the terminal dialogue its web server resets
+          the connection (NS_ERROR_NET_RESET) -> onerror -> callback(false), and
+          the caller re-knocks; callback(true) = the printer answered.
+        */
+        probePrinterReady: function(callback) {
+            var done = false;
+            var finish = function(ready) {
+                if (done) {
+                    return;
+                }
+                done = true;
+                callback(ready);
+            };
+            this.fiscalPrinter.onreceive = function() { finish(true); };
+            this.fiscalPrinter.onerror = function() { finish(false); };
+            var xml = '<printerCommand>'
+                + '<queryPrinterStatus operator="' + EFTPOS_OPERATOR + '" statusType="0" />'
+                + '</printerCommand>';
+            this.fiscalPrinter.send(this.url, xml, EFTPOS_KNOCK_TIMEOUT_MS);
         },
 
         /*

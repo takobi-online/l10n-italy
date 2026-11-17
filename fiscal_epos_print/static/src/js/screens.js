@@ -9,6 +9,13 @@ odoo.define("fiscal_epos_print.screens", function (require) {
     var ReceiptScreenWidget = screens.ReceiptScreenWidget;
     var eposDriver = epson_epos_print.eposDriver;
 
+    // While the printer is still closing the dialogue with the terminal, a new
+    // authorizeSales sent too soon gets its connection reset (NS_ERROR_NET_RESET).
+    // Before sending, we "knock" with a read-only queryPrinterStatus until the
+    // printer answers: re-knock every INTERVAL, give up after MAX.
+    var EFTPOS_KNOCK_INTERVAL_MS = 1000;
+    var EFTPOS_KNOCK_MAX_MS = 15000;
+
     ReceiptScreenWidget.include({
 
         lock_screen: function(locked) {
@@ -107,47 +114,102 @@ odoo.define("fiscal_epos_print.screens", function (require) {
                 if (!this.order_is_valid(force_validation)) {
                     return;
                 }
+                // Concurrency guard: never run two exchanges at once (the loading
+                // overlay also blocks the UI during one).
+                if (this.pos._eftpos_busy) {
+                    this.gui.show_popup('error', {
+                        'title': _t('Payment terminal busy'),
+                        'body': _t('The payment terminal is still busy with the previous transaction. Please wait a few seconds and try again.'),
+                    });
+                    return;
+                }
+                this.pos._eftpos_busy = true;
                 this.chrome.loading_show();
                 this.chrome.loading_message(_t('Waiting for the payment terminal'));
                 var printer_options = order.getPrinterOptions();
                 printer_options.order = order;
                 var fp90 = new eposDriver(printer_options, this);
-                fp90.authorizeEftpos({
-                    amount: eftposLine.get_amount(),
-                    timeout: eftposLine.cashregister.journal.fiscalprinter_eftpos_timeout,
-                }, function(outcome) {
+                var releaseEftpos = function() {
+                    self.pos._eftpos_busy = false;
                     self.chrome.loading_hide();
-                    if (!outcome.approved) {
-                        console.log('EFT-POS not approved:', outcome);
-                        var details = 'code: ' + (outcome.code || 'n/d') +
-                            (outcome.status != null ? ', status: ' + outcome.status : '') +
-                            (outcome.elapsed_ms != null ? ', ' + Math.round(outcome.elapsed_ms / 1000) + 's' : '');
-                        var body;
-                        if (outcome.declined) {
-                            body = _t('The payment terminal declined the transaction (electronic payment error).') +
-                                ' (' + details + '). ' +
-                                _t('No receipt or order was created.');
-                        } else {
-                            body = _t('No answer from the payment terminal') +
-                                ' (' + details + '). ' +
-                                _t('The transaction was not completed; no receipt or order was created.');
-                            if (outcome.code === 'FP_NO_ANSWER') {
-                                body += ' ' + _t('This usually means a time-out: increase the EFT-POS timeout on the payment method and on the printer (SET 31).');
+                };
+                // Send the actual (non-idempotent) amount exchange.
+                var sendExchange = function() {
+                    self.chrome.loading_message(_t('Waiting for the payment terminal'));
+                    try {
+                        fp90.authorizeEftpos({
+                            amount: eftposLine.get_amount(),
+                            timeout: eftposLine.cashregister.journal.fiscalprinter_eftpos_timeout,
+                        }, function(outcome) {
+                            releaseEftpos();
+                            if (!outcome.approved) {
+                                console.log('EFT-POS not approved:', outcome);
+                                var details = 'code: ' + (outcome.code || 'n/d') +
+                                    (outcome.status != null ? ', status: ' + outcome.status : '') +
+                                    (outcome.elapsed_ms != null ? ', ' + Math.round(outcome.elapsed_ms / 1000) + 's' : '');
+                                var body;
+                                if (outcome.declined) {
+                                    body = _t('The payment terminal declined the transaction (electronic payment error).') +
+                                        ' (' + details + '). ' +
+                                        _t('No receipt or order was created.');
+                                } else if (outcome.code === 'FP_NO_ANSWER_NETWORK') {
+                                    body = _t('The payment terminal is busy (network error): the request was reset while the printer was still handling the previous transaction. Please wait a few seconds and try again.') +
+                                        ' (' + details + ').';
+                                } else {
+                                    body = _t('No answer from the payment terminal') +
+                                        ' (' + details + '). ' +
+                                        _t('The transaction was not completed; no receipt or order was created.');
+                                    if (outcome.code === 'FP_NO_ANSWER') {
+                                        body += ' ' + _t('This usually means a time-out: increase the EFT-POS timeout on the payment method and on the printer (SET 31).');
+                                    }
+                                }
+                                self.gui.show_popup('error', {
+                                    'title': _t('EFT-POS payment not completed'),
+                                    'body': body,
+                                });
+                                return;
                             }
-                        }
+                            order._eftpos_authorized = true;
+                            order._eftpos_timing = {
+                                authorize_ms: outcome.elapsed_ms,
+                                auth_done_ts: Date.now(),
+                            };
+                            self.validate_order(force_validation);
+                        });
+                    } catch (err) {
+                        // Never leave the busy flag stuck if the request fails to start.
+                        releaseEftpos();
+                        console.log('EFT-POS request failed to start:', err);
                         self.gui.show_popup('error', {
                             'title': _t('EFT-POS payment not completed'),
-                            'body': body,
+                            'body': _t('Could not start the EFT-POS request. Please try again.'),
                         });
-                        return;
                     }
-                    order._eftpos_authorized = true;
-                    order._eftpos_timing = {
-                        authorize_ms: outcome.elapsed_ms,
-                        auth_done_ts: Date.now(),
-                    };
-                    self.validate_order(force_validation);
-                });
+                };
+                // "Knock" first: a read-only queryPrinterStatus tells us when the
+                // printer is reachable/free (it resets the connection while still
+                // busy with the terminal). A status query cannot start a payment,
+                // so it is safe to repeat. Only once it answers do we send the real
+                // exchange; otherwise re-knock until EFTPOS_KNOCK_MAX_MS, then give
+                // up with a clear message.
+                var knockDeadline = Date.now() + EFTPOS_KNOCK_MAX_MS;
+                var knock = function() {
+                    fp90.probePrinterReady(function(ready) {
+                        if (ready) {
+                            sendExchange();
+                        } else if (Date.now() < knockDeadline) {
+                            self.chrome.loading_message(_t('Payment terminal busy, waiting...'));
+                            setTimeout(knock, EFTPOS_KNOCK_INTERVAL_MS);
+                        } else {
+                            releaseEftpos();
+                            self.gui.show_popup('error', {
+                                'title': _t('Payment terminal busy'),
+                                'body': _t('The payment terminal is still busy with the previous transaction. Please wait a few seconds and try again.'),
+                            });
+                        }
+                    });
+                };
+                knock();
                 return;
             }
             return this._super(force_validation);
